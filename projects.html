@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Projects — Doc-Portal · Sulagna Sasmal</title>
+  <meta name="description" content="All documentation projects by Sulagna Sasmal — API references, admin guides, knowledge bases, enterprise docs, and AI tools. Filter by type and industry." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>📚</text></svg>" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+
+  <!-- Theme: apply before paint -->
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAV
+════════════════════════════════════════════════════════════ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      doc<span class="nav-brand-dot">·</span>portal
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html"  class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="https://doccraft-ten.vercel.app/" class="nav-link nav-link-external" target="_blank" rel="noopener">DocCraft AI</a>
+      <a href="https://sulagnasasmal.com/" class="nav-link nav-link-external" target="_blank" rel="noopener">Portfolio</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════
+     PAGE HEADER
+════════════════════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="container">
+    <span class="page-header-tag">Documentation Portfolio</span>
+    <h1 class="page-header-title">All Projects</h1>
+    <p class="page-header-sub">
+      Browse the full collection — API references, admin guides, knowledge bases,
+      enterprise documentation, and AI tools.
+      <span id="results-count" style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--amber); margin-left: 8px;"></span>
+    </p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     FILTER BAR
+════════════════════════════════════════════════════════════ -->
+<div class="filter-bar">
+  <div class="filter-bar-inner">
+
+    <!-- Type filters -->
+    <div class="filter-row">
+      <span class="filter-label">Type</span>
+      <button class="filter-pill active" data-filter-group="type" data-filter-value="all">All</button>
+      <button class="filter-pill" data-filter-group="type" data-filter-value="api">API Reference</button>
+      <button class="filter-pill" data-filter-group="type" data-filter-value="admin">Admin Guide</button>
+      <button class="filter-pill" data-filter-group="type" data-filter-value="kb">Knowledge Base</button>
+      <button class="filter-pill" data-filter-group="type" data-filter-value="enterprise">Enterprise Docs</button>
+      <button class="filter-pill" data-filter-group="type" data-filter-value="ai-tool">AI Tool</button>
+    </div>
+
+    <!-- Industry filters + Search -->
+    <div class="filter-row" style="justify-content: space-between;">
+      <div class="filter-row" style="flex-wrap:wrap; gap: 6px;">
+        <span class="filter-label">Industry</span>
+        <button class="filter-pill active" data-filter-group="industry" data-filter-value="all">All</button>
+        <button class="filter-pill" data-filter-group="industry" data-filter-value="fintech">FinTech</button>
+        <button class="filter-pill" data-filter-group="industry" data-filter-value="compliance">Compliance</button>
+        <button class="filter-pill" data-filter-group="industry" data-filter-value="enterprise">Enterprise</button>
+        <button class="filter-pill" data-filter-group="industry" data-filter-value="aiml">AI/ML</button>
+      </div>
+      <div class="search-wrap">
+        <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="search-input" class="search-input" placeholder="Search projects…" autocomplete="off" spellcheck="false" />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PROJECT GRID
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <div class="project-grid" id="project-grid">
+
+      <!-- Card: PayPlus API -->
+      <article class="project-card type-api"
+        data-type="api" data-industry="fintech"
+        data-title="PayPlus Payments API"
+        data-subtitle="REST API Reference"
+        data-desc="Complete REST API reference covering authentication, ACH, RTP, Fedwire, SWIFT, webhooks, and error handling."
+        data-techs="HTML CSS JavaScript REST API FinTech Payments">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-amber type-badge">API Reference</span>
+            <span class="badge badge-slate">FinTech</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="project-card-title">PayPlus Payments API</h2>
+          <p class="project-card-subtitle">REST API Reference</p>
+        </div>
+        <p class="project-card-desc">
+          Complete developer reference for a fictional enterprise payments platform.
+          Covers OAuth 2.0, ACH, RTP/FedNow, Fedwire, SWIFT, card payments,
+          webhook events, idempotency, rate limits, and error codes.
+          Stripe-style developer experience with code samples throughout.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">CSS</span>
+          <span class="tech-chip">JavaScript</span>
+          <span class="tech-chip">Sidebar Nav</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">8 sections · 40+ endpoints</span>
+          </div>
+          <span class="industry-badge">FinTech / Payments</span>
+        </div>
+      </article>
+
+      <!-- Card: PayPlus Admin -->
+      <article class="project-card type-admin"
+        data-type="admin" data-industry="fintech"
+        data-title="PayPlus Admin Guide"
+        data-subtitle="Enterprise Administration"
+        data-desc="Enterprise administration guide covering installation, user management, payment rail configuration, compliance settings, and troubleshooting."
+        data-techs="HTML CSS JavaScript Admin Guide Enterprise">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-teal type-badge">Admin Guide</span>
+            <span class="badge badge-slate">FinTech</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="project-card-title">PayPlus Admin Guide</h2>
+          <p class="project-card-subtitle">Enterprise Administration</p>
+        </div>
+        <p class="project-card-desc">
+          Comprehensive enterprise administration guide for the PayPlus platform.
+          Covers system installation, user and role management, payment rail
+          configuration, compliance settings, audit logging, and structured
+          troubleshooting procedures. MadCap Flare-inspired structure.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">CSS</span>
+          <span class="tech-chip">JavaScript</span>
+          <span class="tech-chip">3-column grid</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">15+ pages · 6 sections</span>
+          </div>
+          <span class="industry-badge">FinTech / Enterprise</span>
+        </div>
+      </article>
+
+      <!-- Card: US Payments Hub -->
+      <article class="project-card type-kb"
+        data-type="kb" data-industry="fintech"
+        data-title="US Payments Hub"
+        data-subtitle="Operations & Compliance Reference"
+        data-desc="Operations reference covering all six US payment rails: ACH, Fedwire, RTP, FedNow, SWIFT, Card. 12 scenario walkthroughs and compliance checklists."
+        data-techs="HTML CSS JavaScript Knowledge Base Payments ACH Fedwire RTP FedNow SWIFT Card">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-indigo type-badge">Knowledge Base</span>
+            <span class="badge badge-slate">FinTech</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="project-card-title">US Payments Hub</h2>
+          <p class="project-card-subtitle">Operations &amp; Compliance Reference</p>
+        </div>
+        <p class="project-card-desc">
+          Comprehensive operations and compliance reference covering all
+          six US payment rails: ACH, Fedwire, RTP, FedNow, SWIFT, and Card.
+          Includes 12 scenario walkthroughs, rail comparison tables, and
+          compliance decision guides.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">CSS</span>
+          <span class="tech-chip">JavaScript</span>
+          <span class="tech-chip">6 Rails</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">6 rails · 12 scenarios</span>
+          </div>
+          <span class="industry-badge">FinTech / Compliance</span>
+        </div>
+      </article>
+
+      <!-- Card: US ACH Docs -->
+      <article class="project-card type-kb"
+        data-type="kb" data-industry="fintech"
+        data-title="US ACH Processing Docs"
+        data-subtitle="Technical Deep Dive"
+        data-desc="Detailed technical documentation for US ACH processing: transaction lifecycle, return codes, NOC handling, same-day ACH, and Nacha compliance."
+        data-techs="Markdown Mermaid ACH Nacha Payments">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-indigo type-badge">Knowledge Base</span>
+            <span class="badge badge-slate">FinTech</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="project-card-title">US ACH Processing Docs</h2>
+          <p class="project-card-subtitle">Technical Deep Dive</p>
+        </div>
+        <p class="project-card-desc">
+          In-depth technical documentation for US ACH payment processing.
+          Eight Markdown source files with Mermaid diagrams covering
+          transaction lifecycle, return codes, NOC handling, same-day ACH
+          processing windows, and Nacha rules compliance.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">Markdown</span>
+          <span class="tech-chip">Mermaid</span>
+          <span class="tech-chip">8 source files</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">8 files · diagrams included</span>
+          </div>
+          <span class="industry-badge">FinTech / Payments</span>
+        </div>
+      </article>
+
+      <!-- Card: NICE Actimize -->
+      <article class="project-card type-enterprise"
+        data-type="enterprise" data-industry="compliance"
+        data-title="NICE Actimize Platform Docs"
+        data-subtitle="Enterprise Structured Authoring"
+        data-desc="MadCap Flare enterprise documentation for NICE Actimize financial crime prevention. 11+ modules, 20+ build targets: HTML5, PDF, Word."
+        data-techs="MadCap Flare HTML5 PDF Word Fraud AML Compliance FinCrime">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-slate type-badge">Enterprise Docs</span>
+            <span class="badge badge-slate">Compliance</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="project-card-title">NICE Actimize Docs</h2>
+          <p class="project-card-subtitle">Enterprise Structured Authoring</p>
+        </div>
+        <p class="project-card-desc">
+          Full MadCap Flare enterprise documentation project for the NICE Actimize
+          financial crime prevention platform. Covers Fraud, AML, ActimizeWatch,
+          Cloud, DataIQ, ERCM, FMC, Platform, X-Sight, Xceed, and Zoomin.
+          Master glossary, 20+ build targets, QA reports.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">MadCap Flare</span>
+          <span class="tech-chip">HTML5</span>
+          <span class="tech-chip">PDF</span>
+          <span class="tech-chip">Word</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">11+ modules · 20+ build targets</span>
+          </div>
+          <span class="industry-badge">FinCrime / Compliance</span>
+        </div>
+      </article>
+
+      <!-- Card: SunBridge -->
+      <article class="project-card type-enterprise"
+        data-type="enterprise" data-industry="enterprise"
+        data-title="SunBridge Asset Atrium Manager"
+        data-subtitle="Investment Platform Docs"
+        data-desc="Technical documentation for an enterprise investment management platform: architecture, HA design, batch processing, multi-timezone ops, failover."
+        data-techs="HTML CSS Mermaid JavaScript Investment Enterprise Dark Mode">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-slate type-badge">Enterprise Docs</span>
+            <span class="badge badge-teal">Enterprise</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="project-card-title">SunBridge Asset Atrium</h2>
+          <p class="project-card-subtitle">Investment Platform Docs</p>
+        </div>
+        <p class="project-card-desc">
+          Technical documentation site for an enterprise investment management
+          platform. Covers platform overview, system architecture, HA design,
+          batch processing, multi-timezone operations, failover, audit trails,
+          DB/config updates, and release governance. Dark mode with Mermaid diagrams.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">CSS</span>
+          <span class="tech-chip">Mermaid</span>
+          <span class="tech-chip">Dark Mode</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">9 pages · Mermaid diagrams</span>
+          </div>
+          <span class="industry-badge">Enterprise / Investment</span>
+        </div>
+      </article>
+
+      <!-- Card: DocCraft AI -->
+      <article class="project-card type-ai-tool"
+        data-type="ai-tool" data-industry="aiml"
+        data-title="DocCraft AI"
+        data-subtitle="AI Documentation Generator"
+        data-desc="Next.js 14 SaaS app using GPT-4o to generate professional documentation. 5 templates, MSTP compliance checking, Mermaid diagrams, inline AI editing."
+        data-techs="Next.js TypeScript GPT-4o Tailwind AI Documentation Generator Vercel">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-indigo type-badge">AI Tool</span>
+            <span class="badge badge-indigo">AI/ML</span>
+          </div>
+          <span class="project-card-live">
+            <span class="live-dot"></span>
+            Live
+          </span>
+        </div>
+        <div>
+          <h2 class="project-card-title">DocCraft AI</h2>
+          <p class="project-card-subtitle">AI Documentation Generator</p>
+        </div>
+        <p class="project-card-desc">
+          Next.js 14 / GPT-4o SaaS tool that generates production-ready documentation
+          from source files. Features 5 doc templates, MSTP style compliance checking,
+          inline AI editing, Mermaid diagram auto-generation, glossary enforcement,
+          and document history — deployed live on Vercel.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">Next.js 14</span>
+          <span class="tech-chip">TypeScript</span>
+          <span class="tech-chip">GPT-4o</span>
+          <span class="tech-chip">Tailwind CSS</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">5 templates · live on Vercel</span>
+          </div>
+          <a href="https://doccraft-ten.vercel.app/" class="btn btn-indigo btn-sm" target="_blank" rel="noopener">Open App ↗</a>
+        </div>
+      </article>
+
+      <!-- Card: PPT2Video -->
+      <article class="project-card type-api"
+        data-type="api" data-industry="aiml"
+        data-title="PPT2Video API"
+        data-subtitle="PowerPoint to Narrated Video"
+        data-desc="Python FastAPI app converting PowerPoint to narrated MP4 via Azure TTS and FFmpeg. REST API, async job queue, dark-mode web interface."
+        data-techs="Python FastAPI Azure TTS FFmpeg REST API Video AI">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-amber type-badge">API Reference</span>
+            <span class="badge badge-indigo">AI/ML</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="project-card-title">PPT2Video API</h2>
+          <p class="project-card-subtitle">PowerPoint to Narrated Video</p>
+        </div>
+        <p class="project-card-desc">
+          Python/FastAPI service that converts PowerPoint files into narrated MP4
+          videos using Azure Text-to-Speech and FFmpeg. Complete REST API reference
+          with async job queue, status polling, and a polished dark-mode SaaS
+          web interface.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">Python</span>
+          <span class="tech-chip">FastAPI</span>
+          <span class="tech-chip">Azure TTS</span>
+          <span class="tech-chip">FFmpeg</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">5 endpoints · async jobs</span>
+          </div>
+          <span class="industry-badge">AI/ML / Automation</span>
+        </div>
+      </article>
+
+      <!-- Empty state (hidden by default) -->
+      <div class="empty-state" id="empty-state" style="display:none;">
+        <div class="empty-state-icon">🔍</div>
+        <p class="empty-state-text">No projects match your filters.<br/>Try a different category or clear the search.</p>
+        <button class="btn btn-outline btn-sm" style="margin-top: 1rem;"
+          onclick="document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active')); document.querySelectorAll('[data-filter-value=\'all\']').forEach(p => p.classList.add('active')); document.getElementById('search-input').value=''; location.reload();">
+          Clear filters
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     DOCCRAFT CTA BANNER
+════════════════════════════════════════════════════════════ -->
+<section style="padding: var(--sp-6) 0 var(--sp-10);">
+  <div class="container">
+    <div style="
+      background: linear-gradient(135deg, var(--amber-light) 0%, var(--bg-card) 100%);
+      border: 1.5px solid rgba(217,119,6,0.2);
+      border-radius: var(--radius-xl);
+      padding: var(--sp-5) var(--sp-6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-4);
+      flex-wrap: wrap;
+    ">
+      <div>
+        <p style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--amber); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px;">✨ Try the AI</p>
+        <h3 style="font-family: var(--font-display); font-weight: 800; font-size: var(--text-2xl); color: var(--text); letter-spacing: -0.02em;">Generate docs with DocCraft AI</h3>
+        <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-top: 4px;">Upload a source file, pick a template, get MSTP-compliant documentation — instantly.</p>
+      </div>
+      <a href="https://doccraft-ten.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener" style="flex-shrink:0;">
+        Launch DocCraft AI ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">doc<span class="nav-brand-dot">·</span>portal</div>
+        <p class="footer-tagline">
+          A curated portfolio of API references, admin guides, knowledge bases,
+          and AI-powered documentation tools by Sulagna Sasmal.
+        </p>
+      </div>
+      <div>
+        <p class="footer-col-title">Filter</p>
+        <ul class="footer-links">
+          <li><a href="projects.html?type=api" class="footer-link">API References</a></li>
+          <li><a href="projects.html?type=admin" class="footer-link">Admin Guides</a></li>
+          <li><a href="projects.html?type=kb" class="footer-link">Knowledge Bases</a></li>
+          <li><a href="projects.html?type=enterprise" class="footer-link">Enterprise Docs</a></li>
+          <li><a href="projects.html?type=ai-tool" class="footer-link">AI Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Connect</p>
+        <ul class="footer-links">
+          <li><a href="https://sulagnasasmal.com/" class="footer-link" target="_blank" rel="noopener">Portfolio ↗</a></li>
+          <li><a href="https://github.com/sulagnasasmal" class="footer-link" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="https://doccraft-ten.vercel.app/" class="footer-link" target="_blank" rel="noopener">DocCraft AI ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Sulagna Sasmal · Technical Writer &amp; Documentation Engineer</span>
+      <span style="font-family: var(--font-mono); font-size: var(--text-xs);">doc·portal v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/filter.js"></script>
+<script src="assets/js/search.js"></script>
+
+</body>
+</html>

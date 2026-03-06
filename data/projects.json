@@ -1,0 +1,180 @@
+{
+  "projects": [
+    {
+      "id": "payplus-api",
+      "title": "PayPlus Payments API",
+      "subtitle": "REST API Reference",
+      "description": "Complete REST API reference for a fictional enterprise payments platform. Covers authentication, ACH, RTP/FedNow, Fedwire, SWIFT, webhook events, and error handling — Stripe-style developer experience.",
+      "type": "API Reference",
+      "type_key": "api",
+      "industry": "FinTech",
+      "industry_key": "fintech",
+      "techs": ["HTML", "CSS", "JavaScript"],
+      "featured": true,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/Payments/payments-api-guide",
+      "color": "amber",
+      "icon": "code-brackets",
+      "stats": {
+        "endpoints": "40+",
+        "sections": 8
+      }
+    },
+    {
+      "id": "payplus-admin",
+      "title": "PayPlus Admin Guide",
+      "subtitle": "Enterprise Administration",
+      "description": "End-to-end enterprise administration guide for the PayPlus platform. Covers installation, user and role management, payment rail configuration, compliance settings, and troubleshooting procedures.",
+      "type": "Admin Guide",
+      "type_key": "admin",
+      "industry": "FinTech",
+      "industry_key": "fintech",
+      "techs": ["HTML", "CSS", "JavaScript"],
+      "featured": true,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/Payments/payplus-admin-guide",
+      "color": "teal",
+      "icon": "settings",
+      "stats": {
+        "pages": "15+",
+        "sections": 6
+      }
+    },
+    {
+      "id": "us-payments-hub",
+      "title": "US Payments Hub",
+      "subtitle": "Operations & Compliance Reference",
+      "description": "Comprehensive operations reference covering all six US payment rails: ACH, Fedwire, RTP, FedNow, SWIFT, and Card. Includes 12 scenario walkthroughs, compliance checklists, and rail-by-rail decision guides.",
+      "type": "Knowledge Base",
+      "type_key": "kb",
+      "industry": "FinTech",
+      "industry_key": "fintech",
+      "techs": ["HTML", "CSS", "JavaScript"],
+      "featured": true,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/Payments/us-payments-hub",
+      "color": "indigo",
+      "icon": "database",
+      "stats": {
+        "rails": 6,
+        "scenarios": 12
+      }
+    },
+    {
+      "id": "us-ach-docs",
+      "title": "US ACH Processing Docs",
+      "subtitle": "Technical Deep Dive",
+      "description": "Detailed technical documentation for US ACH payment processing. Eight Markdown source files with diagrams covering transaction lifecycle, return codes, NOC handling, same-day ACH, and Nacha rules compliance.",
+      "type": "Knowledge Base",
+      "type_key": "kb",
+      "industry": "FinTech",
+      "industry_key": "fintech",
+      "techs": ["Markdown", "Mermaid"],
+      "featured": false,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/Payments/us-ach-payment-processing-docs",
+      "color": "indigo",
+      "icon": "document-text",
+      "stats": {
+        "files": 8,
+        "diagrams": "included"
+      }
+    },
+    {
+      "id": "nicke-actimize",
+      "title": "NICE Actimize Platform Docs",
+      "subtitle": "Enterprise Structured Authoring",
+      "description": "Full MadCap Flare enterprise documentation project for the NICE Actimize financial crime prevention platform. Covers Fraud, AML, ActimizeWatch, Cloud, DataIQ, ERCM, FMC, and more. 20+ build targets including HTML5, PDF, and Word.",
+      "type": "Enterprise Docs",
+      "type_key": "enterprise",
+      "industry": "Compliance",
+      "industry_key": "compliance",
+      "techs": ["MadCap Flare", "HTML5", "PDF"],
+      "featured": true,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/doc-fraud/doc-fraud",
+      "color": "amber",
+      "icon": "shield-check",
+      "stats": {
+        "modules": "11+",
+        "build_targets": "20+"
+      }
+    },
+    {
+      "id": "sunbridge-atrium",
+      "title": "SunBridge Asset Atrium Manager",
+      "subtitle": "Investment Platform Docs",
+      "description": "Technical documentation site for an enterprise investment management platform. Covers system architecture, high-availability design, batch processing, multi-timezone operations, failover, audit, DB updates, and release governance.",
+      "type": "Enterprise Docs",
+      "type_key": "enterprise",
+      "industry": "Enterprise",
+      "industry_key": "enterprise",
+      "techs": ["HTML", "CSS", "Mermaid", "JavaScript"],
+      "featured": true,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/enterprise-investment-management-platform-docs",
+      "color": "teal",
+      "icon": "chart-bar",
+      "stats": {
+        "pages": 9,
+        "diagrams": "Mermaid"
+      }
+    },
+    {
+      "id": "doccraft",
+      "title": "DocCraft AI",
+      "subtitle": "AI Documentation Generator",
+      "description": "Next.js 14 SaaS tool that uses GPT-4o to generate professional documentation from source files. Features 5 doc templates, MSTP compliance checking, inline AI editing, Mermaid diagram generation, and document history.",
+      "type": "AI Tool",
+      "type_key": "ai-tool",
+      "industry": "AI/ML",
+      "industry_key": "aiml",
+      "techs": ["Next.js", "TypeScript", "GPT-4o", "Tailwind"],
+      "featured": true,
+      "live_url": "https://doccraft-ten.vercel.app/",
+      "preview_url": "https://doccraft-ten.vercel.app/",
+      "dir": "d:/doccraft",
+      "color": "indigo",
+      "icon": "sparkles",
+      "stats": {
+        "templates": 5,
+        "live": true
+      }
+    },
+    {
+      "id": "ppt2video",
+      "title": "PPT2Video API",
+      "subtitle": "PowerPoint to Narrated Video",
+      "description": "Python/FastAPI application that converts PowerPoint presentations into narrated MP4 videos using Azure Text-to-Speech and FFmpeg. REST API with job queue, async processing, and a polished dark-mode web interface.",
+      "type": "API Reference",
+      "type_key": "api",
+      "industry": "AI/ML",
+      "industry_key": "aiml",
+      "techs": ["Python", "FastAPI", "Azure TTS", "FFmpeg"],
+      "featured": true,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/ppt-video-phase1-API",
+      "color": "amber",
+      "icon": "video-camera",
+      "stats": {
+        "endpoints": "5",
+        "format": "MP4"
+      }
+    }
+  ],
+  "meta": {
+    "total": 8,
+    "types": ["API Reference", "Admin Guide", "Knowledge Base", "Enterprise Docs", "AI Tool"],
+    "industries": ["FinTech", "Compliance", "Enterprise", "AI/ML"],
+    "owner": "Sulagna Sasmal",
+    "portfolio": "https://sulagnasasmal.com",
+    "github": "https://github.com/sulagnasasmal"
+  }
+}
