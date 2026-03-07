@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -206,126 +206,115 @@
     </div>
 
     <!-- Writing samples reference list -->
-    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:0; margin-top:2rem; border-top:1px solid var(--border);">
+    <div style="margin-top:2rem;">
 
-      <!-- PayPlus Payments API -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+            <!-- VaultPay Payment API -->
+      <div style="padding:1.5rem 0; border-bottom:1px solid var(--border); cursor:pointer;" onclick="window.open('https://sulagnasasmal.github.io/vaultpay-api-docs/','_blank')">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem;">
           <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">API</span>
           <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
         </div>
-        <a href="https://sulagnasasmal.github.io/payments-api-guide/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">PayPlus Payments API ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">REST API reference — OAuth 2.0, ACH, RTP/FedNow, Fedwire, SWIFT, Webhooks</span>
-      </div>
-
-      <!-- PayPlus Admin Guide -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
-          <span class="badge badge-teal" style="font-size:10px; padding:2px 6px;">Admin</span>
-          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
+        <div style="font-weight:700; font-size:1rem; color:var(--text); margin-bottom:0.25rem;">VaultPay Payment API</div>
+        <div style="font-size:0.8rem; color:var(--text-secondary); font-style:italic; margin-bottom:0.6rem;">Enterprise REST API reference for a fintech payment processing platform</div>
+        <div style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6; margin-bottom:0.75rem;">Full payments lifecycle: authentication, charges, refunds, disputes, webhooks, and 3D Secure. Compliance sections covering AML monitoring, KYC, and sanctions screening. Written to match the quality bar of real developer portals.</div>
+        <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:0.5rem;">
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">PCI DSS L1</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">PSD2 / SCA</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">BSA/AML</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">Webhooks</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">OpenAPI</span>
         </div>
-        <a href="https://sulagnasasmal.github.io/payplus-admin-guide/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">PayPlus Admin Guide ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">Enterprise administration — installation, RBAC, rail config, compliance, troubleshooting</span>
+        <span style="font-size:0.8rem; color:var(--amber, #d97706); font-weight:600;">View live site &rarr;</span>
       </div>
 
-      <!-- US Payments Hub -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
-          <span class="badge badge-indigo" style="font-size:10px; padding:2px 6px;">Knowledge Base</span>
-          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech / Compliance</span>
-        </div>
-        <a href="https://sulagnasasmal.github.io/us-payments-hub/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">US Payments Hub ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">All six US payment rails — ACH, Fedwire, RTP, FedNow, SWIFT, Card · 12 scenarios</span>
-      </div>
-
-      <!-- SunBridge Asset Atrium -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
-          <span class="badge badge-slate" style="font-size:10px; padding:2px 6px;">Enterprise</span>
-          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">Investment</span>
-        </div>
-        <a href="https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">SunBridge Asset Atrium ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">Investment platform docs — architecture, HA, NAV batch, multi-TZ, release governance</span>
-      </div>
-
-      <!-- DocCraft Help Center -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
-          <span class="badge badge-indigo" style="font-size:10px; padding:2px 6px;">Knowledge Base</span>
-          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">AI/ML</span>
-        </div>
-        <a href="https://sulagnasasmal.github.io/doccraft-help-center/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">DocCraft Help Center ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">Self-service help center for DocCraft AI — quickstart, FAQ, troubleshooting, release notes</span>
-      </div>
-
-      <!-- FinTech Learning Academy -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
-          <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">Tutorial</span>
-          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
-        </div>
-        <a href="https://sulagnasasmal.github.io/fintech-learning-academy/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">FinTech Learning Academy ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">LMS-style course catalog — payments, ACH, fraud, AML · quizzes &amp; certificates</span>
-      </div>
-
-      <!-- Developer Tutorial Series -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
-          <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">Tutorial</span>
-          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
-        </div>
-        <a href="https://sulagnasasmal.github.io/payments-tutorial-series/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">Developer Tutorial Series ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">Payments API integration — ACH, HMAC-SHA256 webhooks, sandbox testing, key rotation</span>
-      </div>
-
-      <!-- Compliance & AML Training -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
-          <span class="badge badge-indigo" style="font-size:10px; padding:2px 6px;">Training</span>
-          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">Compliance</span>
-        </div>
-        <a href="https://sulagnasasmal.github.io/aml-compliance-training/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">Compliance &amp; AML Training ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">BSA/AML role-based training — BSA/KYC, OFAC, AML typologies, SAR · cert quiz</span>
-      </div>
-
-      <!-- Developer Onboarding -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
-          <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">Tutorial</span>
-          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
-        </div>
-        <a href="https://sulagnasasmal.github.io/developer-onboarding/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">Developer Onboarding ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">5-step sandbox-to-production flow — account setup, SDK, ACH, webhooks, go-live</span>
-      </div>
-
-      <!-- VaultPay Payment API -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
-          <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">API</span>
-          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
-        </div>
-        <a href="https://sulagnasasmal.github.io/vaultpay-api-docs/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">VaultPay Payment API ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">Enterprise fintech REST API — PCI DSS, PSD2/SCA, BSA/AML coverage</span>
-      </div>
-
-      <!-- CaseForge API -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+      <!-- CaseForge Case Management -->
+      <div style="padding:1.5rem 0; border-bottom:1px solid var(--border); cursor:pointer;" onclick="window.open('https://sulagnasasmal.github.io/caseforge-api-docs/caseforge-api-docs.html','_blank')">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem;">
           <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">API</span>
           <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">Compliance</span>
         </div>
-        <a href="https://sulagnasasmal.github.io/caseforge-api-docs/caseforge-api-docs.html" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">CaseForge API ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">AML/compliance case management — SAR filing, audit trails, FinCEN integration</span>
+        <div style="font-weight:700; font-size:1rem; color:var(--text); margin-bottom:0.25rem;">CaseForge Case Management</div>
+        <div style="font-size:0.8rem; color:var(--text-secondary); font-style:italic; margin-bottom:0.6rem;">AML case management and SAR filing API reference (v10.2)</div>
+        <div style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6; margin-bottom:0.75rem;">Enterprise API: full SAR lifecycle from draft to filed, tamper-evident audit trail with SHA-256 hash chaining, and a 15-event webhook system. Aligned to FinCEN BSA, FATF Recommendation 20, EU AMLD6, and FINRA 3310.</div>
+        <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:0.5rem;">
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">FinCEN BSA</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">FATF R.20</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">SOC 2 Type II</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">Audit Trail</span>
+        </div>
+        <span style="font-size:0.8rem; color:var(--amber, #d97706); font-weight:600;">View live site &rarr;</span>
       </div>
 
       <!-- FraudShield AI Engine -->
-      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+      <div style="padding:1.5rem 0; border-bottom:1px solid var(--border); cursor:pointer;" onclick="window.open('https://sulagnasasmal.github.io/fraudshield-docs/','_blank')">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem;">
           <span class="badge badge-slate" style="font-size:10px; padding:2px 6px;">Enterprise</span>
           <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">AI/ML</span>
         </div>
-        <a href="https://sulagnasasmal.github.io/fraudshield-docs/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">FraudShield AI Engine ↗</a>
-        <span style="font-size:var(--text-xs); color:var(--text-secondary);">AI fraud detection docs — risk scoring, model explainability, REST API, compliance</span>
+        <div style="font-weight:700; font-size:1rem; color:var(--text); margin-bottom:0.25rem;">FraudShield AI Engine</div>
+        <div style="font-size:0.8rem; color:var(--text-secondary); font-style:italic; margin-bottom:0.6rem;">AI fraud detection platform docs: risk model to API to explainability</div>
+        <div style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6; margin-bottom:0.75rem;">Nine-page enterprise documentation site. Covers scoring model, configuration YAML, threshold tuning, false positive management, retraining lifecycle, REST API integration, and GDPR / SR 11-7 audit explainability.</div>
+        <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:0.5rem;">
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">GDPR Art.22</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">SR 11-7</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">Risk Scoring</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">MLOps</span>
+        </div>
+        <span style="font-size:0.8rem; color:var(--amber, #d97706); font-weight:600;">View live site &rarr;</span>
+      </div>
+
+      <!-- US Payments Hub -->
+      <div style="padding:1.5rem 0; border-bottom:1px solid var(--border); cursor:pointer;" onclick="window.open('https://sulagnasasmal.github.io/us-payments-hub/','_blank')">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem;">
+          <span class="badge badge-indigo" style="font-size:10px; padding:2px 6px;">Knowledge Base</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech / Compliance</span>
+        </div>
+        <div style="font-weight:700; font-size:1rem; color:var(--text); margin-bottom:0.25rem;">US Payments Hub</div>
+        <div style="font-size:0.8rem; color:var(--text-secondary); font-style:italic; margin-bottom:0.6rem;">Enterprise operations reference for all six US payment rails</div>
+        <div style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6; margin-bottom:0.75rem;">Covers ACH (SEC codes, R01-R29 returns, Reg E), Fedwire (ISO 20022 March 2025 migration), SWIFT (MT/MX, gpi, gSRP), RTP (TCH), FedNow, and Card Networks. Twelve scenario walkthroughs for bank operations and compliance teams.</div>
+        <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:0.5rem;">
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">ACH / NACHA</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">Fedwire / ISO 20022</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">SWIFT gpi</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">RTP / FedNow</span>
+        </div>
+        <span style="font-size:0.8rem; color:var(--amber, #d97706); font-weight:600;">View live site &rarr;</span>
+      </div>
+
+      <!-- Docs-as-Code Portal -->
+      <div style="padding:1.5rem 0; border-bottom:1px solid var(--border); cursor:pointer;" onclick="window.open('https://sulagnasasmal.github.io/docs-as-code-portal/','_blank')">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem;">
+          <span class="badge badge-indigo" style="font-size:10px; padding:2px 6px;">Platform Guide</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">Methodology</span>
+        </div>
+        <div style="font-weight:700; font-size:1rem; color:var(--text); margin-bottom:0.25rem;">Docs-as-Code Portal</div>
+        <div style="font-size:0.8rem; color:var(--text-secondary); font-style:italic; margin-bottom:0.6rem;">16-page portal covering the Docs-as-Code methodology end to end</div>
+        <div style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6; margin-bottom:0.75rem;">Explains the five-stage pipeline, Git version control for docs, GitHub Actions CI/CD, Vale style linting, and multi-format publishing. Built using the same methodology it documents.</div>
+        <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:0.5rem;">
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">Docs-as-Code</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">GitHub Actions</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">Vale</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">MkDocs</span>
+        </div>
+        <span style="font-size:0.8rem; color:var(--amber, #d97706); font-weight:600;">View live site &rarr;</span>
+      </div>
+
+      <!-- SunBridge Asset Atrium -->
+      <div style="padding:1.5rem 0; border-bottom:1px solid var(--border); cursor:pointer;" onclick="window.open('https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/','_blank')">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem;">
+          <span class="badge badge-slate" style="font-size:10px; padding:2px 6px;">Enterprise</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">Investment</span>
+        </div>
+        <div style="font-weight:700; font-size:1rem; color:var(--text); margin-bottom:0.25rem;">SunBridge Asset Atrium</div>
+        <div style="font-size:0.8rem; color:var(--text-secondary); font-style:italic; margin-bottom:0.6rem;">Enterprise investment platform architecture, NAV batch processing, and release governance</div>
+        <div style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6; margin-bottom:0.75rem;">Platform architecture for a multi-timezone institutional asset management system. Covers NAV batch processing, high-availability configuration, and release governance workflows. Reflects real experience from SunGard Asset Arena.</div>
+        <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:0.5rem;">
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">Asset Management</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">NAV Processing</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">UCITS</span>
+          <span style="background:var(--border); color:var(--text-secondary); padding:2px 7px; border-radius:4px; font-size:0.72rem; font-family:var(--font-mono);">MiFID II</span>
+        </div>
+        <span style="font-size:0.8rem; color:var(--amber, #d97706); font-weight:600;">View live site &rarr;</span>
       </div>
 
     </div><!-- /writing-samples list -->
