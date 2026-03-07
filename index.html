@@ -88,12 +88,14 @@
           <pre><code><span class="json-bracket">{</span>
   <span class="json-key">"owner"</span><span class="json-bracket">:</span>       <span class="json-str">"Sulagna Sasmal"</span><span class="json-bracket">,</span>
   <span class="json-key">"role"</span><span class="json-bracket">:</span>        <span class="json-str">"Technical Writer"</span><span class="json-bracket">,</span>
-  <span class="json-key">"projects"</span><span class="json-bracket">:</span>    <span class="json-num">8</span><span class="json-bracket">,</span>
+  <span class="json-key">"projects"</span><span class="json-bracket">:</span>    <span class="json-num">13</span><span class="json-bracket">,</span>
   <span class="json-key">"doc_types"</span><span class="json-bracket">:</span>   <span class="json-bracket">[</span>
     <span class="json-str">"API Reference"</span><span class="json-bracket">,</span>
     <span class="json-str">"Admin Guide"</span><span class="json-bracket">,</span>
     <span class="json-str">"Knowledge Base"</span><span class="json-bracket">,</span>
-    <span class="json-str">"Enterprise Docs"</span>
+    <span class="json-str">"Enterprise Docs"</span><span class="json-bracket">,</span>
+    <span class="json-str">"Tutorial"</span><span class="json-bracket">,</span>
+    <span class="json-str">"Training"</span>
   <span class="json-bracket">],</span>
   <span class="json-key">"industries"</span><span class="json-bracket">:</span>  <span class="json-bracket">[</span>
     <span class="json-str">"FinTech"</span><span class="json-bracket">,</span>
@@ -119,11 +121,11 @@
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item">
-        <div class="stat-number">8</div>
+        <div class="stat-number">13</div>
         <div class="stat-label">Projects</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">5</div>
+        <div class="stat-number">7</div>
         <div class="stat-label">Doc Types</div>
       </div>
       <div class="stat-item">
@@ -164,12 +166,24 @@
       <button class="category-tile" data-category-filter="kb" aria-label="Knowledge Base projects">
         <div class="category-tile-icon indigo">🧠</div>
         <div class="category-tile-label">Knowledge Bases</div>
-        <div class="category-tile-count">2 projects</div>
+        <div class="category-tile-count">3 projects</div>
       </button>
 
       <button class="category-tile" data-category-filter="ai-tool" aria-label="AI Tools">
         <div class="category-tile-icon slate">✨</div>
         <div class="category-tile-label">AI Tools</div>
+        <div class="category-tile-count">1 project</div>
+      </button>
+
+      <button class="category-tile" data-category-filter="tutorial" aria-label="Tutorial projects">
+        <div class="category-tile-icon amber">📖</div>
+        <div class="category-tile-label">Tutorials</div>
+        <div class="category-tile-count">3 projects</div>
+      </button>
+
+      <button class="category-tile" data-category-filter="training" aria-label="Training projects">
+        <div class="category-tile-icon indigo">🎓</div>
+        <div class="category-tile-label">Training</div>
         <div class="category-tile-count">1 project</div>
       </button>
 
@@ -188,7 +202,7 @@
         <h2 class="section-title">Selected Projects</h2>
         <p class="section-sub">Handpicked documentation samples across industries and formats.</p>
       </div>
-      <a href="projects.html" class="btn btn-outline btn-sm">View All 8 →</a>
+      <a href="projects.html" class="btn btn-outline btn-sm">View All 13 →</a>
     </div>
 
     <div class="project-grid" id="project-grid">
@@ -408,6 +422,185 @@
             <span class="stat-chip">· MP4 output</span>
           </div>
           <a href="projects.html?type=api" class="btn btn-ghost btn-sm">View Docs →</a>
+        </div>
+      </article>
+
+      <!-- Card: FinTech Learning Academy -->
+      <article class="project-card type-tutorial"
+        data-type="tutorial" data-industry="fintech"
+        data-title="FinTech Learning Academy"
+        data-subtitle="LMS-Style Course Catalog"
+        data-desc="Multi-module learning platform covering payments fundamentals, ACH, fraud, and compliance. Quizzes, progress tracking, certificates.">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-amber type-badge">Tutorial</span>
+            <span class="badge badge-slate">FinTech</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="project-card-title">FinTech Learning Academy</h3>
+          <p class="project-card-subtitle">LMS-Style Course Catalog</p>
+        </div>
+        <p class="project-card-desc">
+          Multi-module learning platform covering payments fundamentals, ACH, fraud detection,
+          and compliance. Lesson-by-lesson progress tracking, scenario-based quizzes,
+          and printable certificates — no server required.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">CSS</span>
+          <span class="tech-chip">JavaScript</span>
+          <span class="tech-chip">localStorage</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">4 courses</span>
+            <span class="stat-chip">· Quizzes &amp; Certs</span>
+          </div>
+          <a href="projects.html?type=tutorial" class="btn btn-ghost btn-sm">View Docs →</a>
+        </div>
+      </article>
+
+      <!-- Card: DocCraft Help Center -->
+      <article class="project-card type-kb"
+        data-type="kb" data-industry="aiml"
+        data-title="DocCraft Help Center"
+        data-subtitle="Self-Service Knowledge Base"
+        data-desc="Full help center for DocCraft AI: quickstart, 20-item FAQ, troubleshooting, feature guides, and release notes v1.0–v1.4.">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-indigo type-badge">Knowledge Base</span>
+            <span class="badge badge-indigo">AI/ML</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="project-card-title">DocCraft Help Center</h3>
+          <p class="project-card-subtitle">Self-Service Knowledge Base</p>
+        </div>
+        <p class="project-card-desc">
+          Comprehensive self-service help center for DocCraft AI. Covers getting started,
+          FAQ (20 items), troubleshooting scenarios, feature guides, and full release history
+          from v1.0.0 through v1.4.0.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">CSS</span>
+          <span class="tech-chip">Accordion Search</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">6 pages</span>
+            <span class="stat-chip">· 20 FAQ items</span>
+          </div>
+          <a href="projects.html?type=kb" class="btn btn-ghost btn-sm">View Docs →</a>
+        </div>
+      </article>
+
+      <!-- Card: Developer Tutorial Series -->
+      <article class="project-card type-tutorial"
+        data-type="tutorial" data-industry="fintech"
+        data-title="Developer Tutorial Series"
+        data-subtitle="Payments API Integration"
+        data-desc="Four Stripe-style tutorials: ACH transfers, webhook HMAC-SHA256 verification, sandbox return codes, and API key rotation.">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-amber type-badge">Tutorial</span>
+            <span class="badge badge-slate">FinTech</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="project-card-title">Developer Tutorial Series</h3>
+          <p class="project-card-subtitle">Payments API Integration</p>
+        </div>
+        <p class="project-card-desc">
+          Task-based tutorial series for Payments API integration. Covers ACH transfer creation,
+          webhook HMAC-SHA256 signature verification, sandbox return code testing, and
+          zero-downtime API key rotation — in Node.js, Python, and cURL.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">Node.js</span>
+          <span class="tech-chip">Python</span>
+          <span class="tech-chip">cURL</span>
+          <span class="tech-chip">3 Languages</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">4 tutorials</span>
+            <span class="stat-chip">· Code tabs</span>
+          </div>
+          <a href="projects.html?type=tutorial" class="btn btn-ghost btn-sm">View Docs →</a>
+        </div>
+      </article>
+
+      <!-- Card: Compliance & AML Training -->
+      <article class="project-card type-training"
+        data-type="training" data-industry="compliance"
+        data-title="Compliance &amp; AML Training"
+        data-subtitle="BSA · OFAC · AML · SAR"
+        data-desc="Role-based BSA/AML employee training with 4 modules, scenario-based content, and a 20-question certification knowledge check.">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-indigo type-badge">Training</span>
+            <span class="badge badge-slate">Compliance</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="project-card-title">Compliance &amp; AML Training</h3>
+          <p class="project-card-subtitle">BSA · OFAC · AML · SAR</p>
+        </div>
+        <p class="project-card-desc">
+          Structured BSA/AML employee compliance training with role-based learning paths for
+          Compliance Officers, Operations, and Developers. Four full modules with scenario-based
+          content, regulatory context, and a 20-question certification knowledge check.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">CSS</span>
+          <span class="tech-chip">Role Paths</span>
+          <span class="tech-chip">Quiz Engine</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">4 modules</span>
+            <span class="stat-chip">· 20 Qs cert</span>
+          </div>
+          <a href="projects.html?type=training" class="btn btn-ghost btn-sm">View Docs →</a>
+        </div>
+      </article>
+
+      <!-- Card: Developer Onboarding -->
+      <article class="project-card type-tutorial"
+        data-type="tutorial" data-industry="fintech"
+        data-title="Developer Onboarding"
+        data-subtitle="Payments API — 5-Step Flow"
+        data-desc="Interactive 5-step developer onboarding: account setup, SDK install, first ACH call, webhook verification, and go-live checklist.">
+        <div class="project-card-header">
+          <div class="project-card-badges">
+            <span class="badge badge-amber type-badge">Tutorial</span>
+            <span class="badge badge-slate">FinTech</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="project-card-title">Developer Onboarding</h3>
+          <p class="project-card-subtitle">Payments API — 5-Step Flow</p>
+        </div>
+        <p class="project-card-desc">
+          Interactive 5-step onboarding flow from sandbox to production. Covers account &amp; key
+          setup, SDK installation, first ACH transfer, webhook HMAC-SHA256 verification, and
+          a production go-live checklist with localStorage progress tracking.
+        </p>
+        <div class="project-card-techs">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">CSS</span>
+          <span class="tech-chip">Node.js</span>
+          <span class="tech-chip">Python</span>
+        </div>
+        <div class="project-card-footer">
+          <div class="project-card-stats">
+            <span class="stat-chip">5 steps</span>
+            <span class="stat-chip">· Live checklist</span>
+          </div>
+          <a href="projects.html?type=tutorial" class="btn btn-ghost btn-sm">View Docs →</a>
         </div>
       </article>
 

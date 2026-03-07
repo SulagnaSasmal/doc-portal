@@ -167,11 +167,116 @@
         "endpoints": "5",
         "format": "MP4"
       }
+    },
+    {
+      "id": "fintech-learning-academy",
+      "title": "FinTech Learning Academy",
+      "subtitle": "LMS-Style Course Catalog",
+      "description": "Multi-module online learning platform teaching payments fundamentals, ACH processing, fraud detection, and compliance — with lesson progress tracking, scenario-based quizzes, and printable certificates.",
+      "type": "Tutorial",
+      "type_key": "tutorial",
+      "industry": "FinTech",
+      "industry_key": "fintech",
+      "techs": ["HTML", "CSS", "JavaScript", "localStorage"],
+      "featured": true,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/fintech-learning-academy",
+      "color": "amber",
+      "icon": "academic-cap",
+      "stats": {
+        "courses": 4,
+        "lessons": "12+"
+      }
+    },
+    {
+      "id": "doccraft-help-center",
+      "title": "DocCraft Help Center",
+      "subtitle": "Self-Service Knowledge Base",
+      "description": "Full-featured help center for DocCraft AI: getting-started guide, 20-item FAQ, troubleshooting scenarios, feature guides, and release notes from v1.0.0 through v1.4.0.",
+      "type": "Knowledge Base",
+      "type_key": "kb",
+      "industry": "AI/ML",
+      "industry_key": "aiml",
+      "techs": ["HTML", "CSS", "JavaScript", "Accordion Search"],
+      "featured": true,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/doccraft-help-center",
+      "color": "indigo",
+      "icon": "question-mark-circle",
+      "stats": {
+        "pages": 6,
+        "faq_items": 20
+      }
+    },
+    {
+      "id": "payments-tutorial-series",
+      "title": "Developer Tutorial Series",
+      "subtitle": "Payments API Integration",
+      "description": "Four Stripe-style developer tutorials: ACH transfer creation, webhook signature verification, sandbox testing with return code triggers, and API key authentication with zero-downtime key rotation.",
+      "type": "Tutorial",
+      "type_key": "tutorial",
+      "industry": "FinTech",
+      "industry_key": "fintech",
+      "techs": ["HTML", "CSS", "Node.js", "Python", "cURL"],
+      "featured": true,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/payments-tutorial-series",
+      "color": "amber",
+      "icon": "code-brackets",
+      "stats": {
+        "tutorials": 4,
+        "languages": 3
+      }
+    },
+    {
+      "id": "aml-compliance-training",
+      "title": "Compliance & AML Training",
+      "subtitle": "BSA · OFAC · AML · SAR",
+      "description": "Structured BSA/AML employee compliance training with role-based learning paths for compliance officers, operations staff, and developers. Four full modules with scenario-based content and a 20-question certification knowledge check.",
+      "type": "Training",
+      "type_key": "training",
+      "industry": "Compliance",
+      "industry_key": "compliance",
+      "techs": ["HTML", "CSS", "JavaScript", "localStorage"],
+      "featured": true,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/aml-compliance-training",
+      "color": "indigo",
+      "icon": "shield-check",
+      "stats": {
+        "modules": 4,
+        "questions": 20
+      }
+    },
+    {
+      "id": "developer-onboarding",
+      "title": "Developer Onboarding",
+      "subtitle": "Payments API — 5-Step Flow",
+      "description": "Interactive 5-step developer onboarding flow for the Payments API: account & key setup, SDK installation, first ACH API call, webhook HMAC-SHA256 signature verification, and a production go-live checklist.",
+      "type": "Tutorial",
+      "type_key": "tutorial",
+      "industry": "FinTech",
+      "industry_key": "fintech",
+      "techs": ["HTML", "CSS", "Node.js", "Python", "cURL"],
+      "featured": true,
+      "live_url": null,
+      "preview_url": null,
+      "dir": "d:/developer-onboarding",
+      "color": "amber",
+      "icon": "arrow-right-circle",
+      "stats": {
+        "steps": 5,
+        "checklist_items": "20+"
+      }
     }
   ],
   "meta": {
-    "total": 8,
-    "types": ["API Reference", "Admin Guide", "Knowledge Base", "Enterprise Docs", "AI Tool"],
+    "total": 13,
+    "types": ["API Reference", "Admin Guide", "Knowledge Base", "Enterprise Docs", "AI Tool", "Tutorial", "Training"],
     "industries": ["FinTech", "Compliance", "Enterprise", "AI/ML"],
     "owner": "Sulagna Sasmal",
     "portfolio": "https://sulagnasasmal.com",
