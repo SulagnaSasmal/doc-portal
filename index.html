@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doc-Portal — Sulagna Sasmal · Technical Documentation Portfolio</title>
+  <title>DOC Portal — Sulagna Sasmal · Technical Documentation Portfolio</title>
   <meta name="description" content="A curated portfolio of API references, admin guides, knowledge bases, and AI-powered documentation tools by Sulagna Sasmal, Technical Writer & Documentation Engineer." />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Doc-Portal — Technical Documentation Portfolio" />
+  <meta property="og:title" content="DOC Portal — Technical Documentation Portfolio" />
   <meta property="og:description" content="API references, admin guides, knowledge bases, enterprise docs, and AI tools by Sulagna Sasmal." />
   <meta property="og:type" content="website" />
 
@@ -30,13 +30,13 @@
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      doc<span class="nav-brand-dot">·</span>portal
+      DOC Portal
     </a>
 
     <div class="nav-links">
       <a href="index.html"  class="nav-link active">Home</a>
       <a href="projects.html" class="nav-link">Projects</a>
-      <a href="https://doccraft-ten.vercel.app/" class="nav-link nav-link-external" target="_blank" rel="noopener">DocCraft AI</a>
+      <a href="https://sulagnasasmal.github.io/ai-doc-tools/" class="nav-link nav-link-external" target="_blank" rel="noopener">AI Tools ↗</a>
       <a href="https://sulagnasasmal.com/" class="nav-link nav-link-external" target="_blank" rel="noopener">Portfolio</a>
     </div>
 
@@ -121,7 +121,7 @@
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item">
-        <div class="stat-number">13</div>
+        <div class="stat-number">12</div>
         <div class="stat-label">Projects</div>
       </div>
       <div class="stat-item">
@@ -192,497 +192,165 @@
 </section>
 
 <!-- ══════════════════════════════════════════════════════════
-     FEATURED PROJECTS
+     FEATURED WRITING SAMPLES
 ════════════════════════════════════════════════════════════ -->
 <section id="featured-projects">
   <div class="container">
     <div class="section-header" style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
       <div>
         <span class="section-eyebrow">Featured Work</span>
-        <h2 class="section-title">Selected Projects</h2>
+        <h2 class="section-title">Featured Writing Samples</h2>
         <p class="section-sub">Handpicked documentation samples across industries and formats.</p>
       </div>
-      <a href="projects.html" class="btn btn-outline btn-sm">View All 13 →</a>
+      <a href="projects.html" class="btn btn-outline btn-sm">Browse All Projects →</a>
     </div>
 
-    <div class="project-grid" id="project-grid">
+    <!-- Writing samples reference list -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:0; margin-top:2rem; border-top:1px solid var(--border);">
 
-      <!-- Card: PayPlus API -->
-      <article class="project-card type-api"
-        data-type="api" data-industry="fintech"
-        data-title="PayPlus Payments API"
-        data-subtitle="REST API Reference"
-        data-desc="Complete REST API reference covering authentication, ACH, RTP, Fedwire, SWIFT, webhooks, and error handling."
-        data-techs="HTML CSS JavaScript">
-        <div class="project-card-header">
-          <div class="project-card-badges">
-            <span class="badge badge-amber type-badge">API Reference</span>
-            <span class="badge badge-slate">FinTech</span>
-          </div>
+      <!-- PayPlus Payments API -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">API</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
         </div>
-        <div>
-          <h3 class="project-card-title">PayPlus Payments API</h3>
-          <p class="project-card-subtitle">REST API Reference</p>
-        </div>
-        <p class="project-card-desc">
-          Complete developer reference for a fictional enterprise payments platform.
-          Covers OAuth 2.0 auth, ACH, RTP/FedNow, Fedwire, SWIFT, webhook events,
-          and exhaustive error code documentation — Stripe-style experience.
-        </p>
-        <div class="project-card-techs">
-          <span class="tech-chip">HTML</span>
-          <span class="tech-chip">CSS</span>
-          <span class="tech-chip">JavaScript</span>
-          <span class="tech-chip">40+ Endpoints</span>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-stats">
-            <span class="stat-chip">8 sections</span>
-            <span class="stat-chip">· 40+ endpoints</span>
-          </div>
-          <a href="projects.html?type=api" class="btn btn-ghost btn-sm">View Docs →</a>
-        </div>
-      </article>
+        <a href="https://sulagnasasmal.github.io/payments-api-guide/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">PayPlus Payments API ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">REST API reference — OAuth 2.0, ACH, RTP/FedNow, Fedwire, SWIFT, Webhooks</span>
+      </div>
 
-      <!-- Card: PayPlus Admin -->
-      <article class="project-card type-admin"
-        data-type="admin" data-industry="fintech"
-        data-title="PayPlus Admin Guide"
-        data-subtitle="Enterprise Administration"
-        data-desc="End-to-end enterprise administration guide covering installation, user management, payment rail configuration, compliance, and troubleshooting."
-        data-techs="HTML CSS JavaScript">
-        <div class="project-card-header">
-          <div class="project-card-badges">
-            <span class="badge badge-teal type-badge">Admin Guide</span>
-            <span class="badge badge-slate">FinTech</span>
-          </div>
+      <!-- PayPlus Admin Guide -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-teal" style="font-size:10px; padding:2px 6px;">Admin</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
         </div>
-        <div>
-          <h3 class="project-card-title">PayPlus Admin Guide</h3>
-          <p class="project-card-subtitle">Enterprise Administration</p>
-        </div>
-        <p class="project-card-desc">
-          End-to-end enterprise administration guide. Covers installation,
-          user and role management, payment rail configuration, compliance settings,
-          and structured troubleshooting procedures.
-        </p>
-        <div class="project-card-techs">
-          <span class="tech-chip">HTML</span>
-          <span class="tech-chip">CSS</span>
-          <span class="tech-chip">Sidebar Nav</span>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-stats">
-            <span class="stat-chip">15+ pages</span>
-            <span class="stat-chip">· 6 sections</span>
-          </div>
-          <a href="projects.html?type=admin" class="btn btn-ghost btn-sm">View Docs →</a>
-        </div>
-      </article>
+        <a href="https://sulagnasasmal.github.io/payplus-admin-guide/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">PayPlus Admin Guide ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">Enterprise administration — installation, RBAC, rail config, compliance, troubleshooting</span>
+      </div>
 
-      <!-- Card: US Payments Hub -->
-      <article class="project-card type-kb"
-        data-type="kb" data-industry="fintech"
-        data-title="US Payments Hub"
-        data-subtitle="Operations & Compliance Reference"
-        data-desc="Operations reference covering all six US payment rails: ACH, Fedwire, RTP, FedNow, SWIFT, and Card. Includes 12 scenario walkthroughs."
-        data-techs="HTML CSS JavaScript">
-        <div class="project-card-header">
-          <div class="project-card-badges">
-            <span class="badge badge-indigo type-badge">Knowledge Base</span>
-            <span class="badge badge-slate">FinTech</span>
-          </div>
+      <!-- US Payments Hub -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-indigo" style="font-size:10px; padding:2px 6px;">Knowledge Base</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech / Compliance</span>
         </div>
-        <div>
-          <h3 class="project-card-title">US Payments Hub</h3>
-          <p class="project-card-subtitle">Operations &amp; Compliance Reference</p>
-        </div>
-        <p class="project-card-desc">
-          Comprehensive reference covering all six US payment rails: ACH, Fedwire,
-          RTP, FedNow, SWIFT, and Card. Includes 12 detailed scenario walkthroughs
-          and rail-by-rail compliance decision guides.
-        </p>
-        <div class="project-card-techs">
-          <span class="tech-chip">HTML</span>
-          <span class="tech-chip">CSS</span>
-          <span class="tech-chip">6 Payment Rails</span>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-stats">
-            <span class="stat-chip">6 rails</span>
-            <span class="stat-chip">· 12 scenarios</span>
-          </div>
-          <a href="projects.html?type=kb" class="btn btn-ghost btn-sm">View Docs →</a>
-        </div>
-      </article>
+        <a href="https://sulagnasasmal.github.io/us-payments-hub/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">US Payments Hub ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">All six US payment rails — ACH, Fedwire, RTP, FedNow, SWIFT, Card · 12 scenarios</span>
+      </div>
 
-      <!-- Card: NICE Actimize -->
-      <article class="project-card type-enterprise"
-        data-type="enterprise" data-industry="compliance"
-        data-title="NICE Actimize Platform Docs"
-        data-subtitle="Enterprise Structured Authoring"
-        data-desc="MadCap Flare enterprise documentation for the NICE Actimize financial crime prevention platform. 11+ modules, 20+ build targets."
-        data-techs="MadCap Flare HTML5 PDF Word">
-        <div class="project-card-header">
-          <div class="project-card-badges">
-            <span class="badge badge-slate type-badge">Enterprise Docs</span>
-            <span class="badge badge-slate">Compliance</span>
-          </div>
+      <!-- SunBridge Asset Atrium -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-slate" style="font-size:10px; padding:2px 6px;">Enterprise</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">Investment</span>
         </div>
-        <div>
-          <h3 class="project-card-title">NICE Actimize Docs</h3>
-          <p class="project-card-subtitle">Enterprise Structured Authoring</p>
-        </div>
-        <p class="project-card-desc">
-          Full MadCap Flare project for the NICE Actimize financial crime prevention
-          platform. Covers Fraud, AML, Cloud, DataIQ, ERCM, FMC, and more.
-          20+ build targets: HTML5, PDF, Word — Cloud and On-Prem variants.
-        </p>
-        <div class="project-card-techs">
-          <span class="tech-chip">MadCap Flare</span>
-          <span class="tech-chip">HTML5</span>
-          <span class="tech-chip">PDF</span>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-stats">
-            <span class="stat-chip">11+ modules</span>
-            <span class="stat-chip">· 20+ targets</span>
-          </div>
-          <a href="projects.html?type=enterprise" class="btn btn-ghost btn-sm">View Docs →</a>
-        </div>
-      </article>
+        <a href="https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">SunBridge Asset Atrium ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">Investment platform docs — architecture, HA, NAV batch, multi-TZ, release governance</span>
+      </div>
 
-      <!-- Card: SunBridge -->
-      <article class="project-card type-enterprise"
-        data-type="enterprise" data-industry="enterprise"
-        data-title="SunBridge Asset Atrium Manager"
-        data-subtitle="Investment Platform Docs"
-        data-desc="Technical documentation for an enterprise investment management platform covering architecture, HA design, batch processing, and release governance."
-        data-techs="HTML CSS Mermaid JavaScript">
-        <div class="project-card-header">
-          <div class="project-card-badges">
-            <span class="badge badge-slate type-badge">Enterprise Docs</span>
-            <span class="badge badge-teal">Enterprise</span>
-          </div>
+      <!-- DocCraft Help Center -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-indigo" style="font-size:10px; padding:2px 6px;">Knowledge Base</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">AI/ML</span>
         </div>
-        <div>
-          <h3 class="project-card-title">SunBridge Asset Atrium</h3>
-          <p class="project-card-subtitle">Investment Platform Docs</p>
-        </div>
-        <p class="project-card-desc">
-          Technical documentation site for an enterprise investment management platform.
-          Covers system architecture, HA design, batch processing, multi-timezone
-          operations, failover, audit trails, and release governance.
-        </p>
-        <div class="project-card-techs">
-          <span class="tech-chip">HTML</span>
-          <span class="tech-chip">Mermaid Diagrams</span>
-          <span class="tech-chip">Dark Mode</span>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-stats">
-            <span class="stat-chip">9 pages</span>
-            <span class="stat-chip">· Mermaid diagrams</span>
-          </div>
-          <a href="projects.html?type=enterprise" class="btn btn-ghost btn-sm">View Docs →</a>
-        </div>
-      </article>
+        <a href="https://sulagnasasmal.github.io/doccraft-help-center/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">DocCraft Help Center ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">Self-service help center for DocCraft AI — quickstart, FAQ, troubleshooting, release notes</span>
+      </div>
 
-      <!-- Card: PPT2Video -->
-      <article class="project-card type-api"
-        data-type="api" data-industry="aiml"
-        data-title="PPT2Video API"
-        data-subtitle="PowerPoint to Narrated Video"
-        data-desc="Python/FastAPI app converting PowerPoint presentations to narrated MP4 videos using Azure TTS and FFmpeg. REST API with async job queue."
-        data-techs="Python FastAPI Azure TTS FFmpeg">
-        <div class="project-card-header">
-          <div class="project-card-badges">
-            <span class="badge badge-amber type-badge">API Reference</span>
-            <span class="badge badge-indigo">AI/ML</span>
-          </div>
+      <!-- FinTech Learning Academy -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">Tutorial</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
         </div>
-        <div>
-          <h3 class="project-card-title">PPT2Video API</h3>
-          <p class="project-card-subtitle">PowerPoint to Narrated Video</p>
-        </div>
-        <p class="project-card-desc">
-          Python/FastAPI application converting PowerPoint files into narrated
-          MP4 videos using Azure Text-to-Speech and FFmpeg. Includes
-          REST API reference, async job queue, and dark-mode web interface.
-        </p>
-        <div class="project-card-techs">
-          <span class="tech-chip">Python</span>
-          <span class="tech-chip">FastAPI</span>
-          <span class="tech-chip">Azure TTS</span>
-          <span class="tech-chip">FFmpeg</span>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-stats">
-            <span class="stat-chip">5 endpoints</span>
-            <span class="stat-chip">· MP4 output</span>
-          </div>
-          <a href="projects.html?type=api" class="btn btn-ghost btn-sm">View Docs →</a>
-        </div>
-      </article>
+        <a href="https://sulagnasasmal.github.io/fintech-learning-academy/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">FinTech Learning Academy ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">LMS-style course catalog — payments, ACH, fraud, AML · quizzes &amp; certificates</span>
+      </div>
 
-      <!-- Card: FinTech Learning Academy -->
-      <article class="project-card type-tutorial"
-        data-type="tutorial" data-industry="fintech"
-        data-title="FinTech Learning Academy"
-        data-subtitle="LMS-Style Course Catalog"
-        data-desc="Multi-module learning platform covering payments fundamentals, ACH, fraud, and compliance. Quizzes, progress tracking, certificates.">
-        <div class="project-card-header">
-          <div class="project-card-badges">
-            <span class="badge badge-amber type-badge">Tutorial</span>
-            <span class="badge badge-slate">FinTech</span>
-          </div>
+      <!-- Developer Tutorial Series -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">Tutorial</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
         </div>
-        <div>
-          <h3 class="project-card-title">FinTech Learning Academy</h3>
-          <p class="project-card-subtitle">LMS-Style Course Catalog</p>
-        </div>
-        <p class="project-card-desc">
-          Multi-module learning platform covering payments fundamentals, ACH, fraud detection,
-          and compliance. Lesson-by-lesson progress tracking, scenario-based quizzes,
-          and printable certificates — no server required.
-        </p>
-        <div class="project-card-techs">
-          <span class="tech-chip">HTML</span>
-          <span class="tech-chip">CSS</span>
-          <span class="tech-chip">JavaScript</span>
-          <span class="tech-chip">localStorage</span>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-stats">
-            <span class="stat-chip">4 courses</span>
-            <span class="stat-chip">· Quizzes &amp; Certs</span>
-          </div>
-          <a href="https://sulagnasasmal.github.io/fintech-learning-academy/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View Project →</a>
-        </div>
-      </article>
+        <a href="https://sulagnasasmal.github.io/payments-tutorial-series/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">Developer Tutorial Series ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">Payments API integration — ACH, HMAC-SHA256 webhooks, sandbox testing, key rotation</span>
+      </div>
 
-      <!-- Card: DocCraft Help Center -->
-      <article class="project-card type-kb"
-        data-type="kb" data-industry="aiml"
-        data-title="DocCraft Help Center"
-        data-subtitle="Self-Service Knowledge Base"
-        data-desc="Full help center for DocCraft AI: quickstart, 20-item FAQ, troubleshooting, feature guides, and release notes v1.0–v1.4.">
-        <div class="project-card-header">
-          <div class="project-card-badges">
-            <span class="badge badge-indigo type-badge">Knowledge Base</span>
-            <span class="badge badge-indigo">AI/ML</span>
-          </div>
+      <!-- Compliance & AML Training -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-indigo" style="font-size:10px; padding:2px 6px;">Training</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">Compliance</span>
         </div>
-        <div>
-          <h3 class="project-card-title">DocCraft Help Center</h3>
-          <p class="project-card-subtitle">Self-Service Knowledge Base</p>
-        </div>
-        <p class="project-card-desc">
-          Comprehensive self-service help center for DocCraft AI. Covers getting started,
-          FAQ (20 items), troubleshooting scenarios, feature guides, and full release history
-          from v1.0.0 through v1.4.0.
-        </p>
-        <div class="project-card-techs">
-          <span class="tech-chip">HTML</span>
-          <span class="tech-chip">CSS</span>
-          <span class="tech-chip">Accordion Search</span>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-stats">
-            <span class="stat-chip">6 pages</span>
-            <span class="stat-chip">· 20 FAQ items</span>
-          </div>
-          <a href="https://sulagnasasmal.github.io/doccraft-help-center/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View Project →</a>
-        </div>
-      </article>
+        <a href="https://sulagnasasmal.github.io/aml-compliance-training/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">Compliance &amp; AML Training ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">BSA/AML role-based training — BSA/KYC, OFAC, AML typologies, SAR · cert quiz</span>
+      </div>
 
-      <!-- Card: Developer Tutorial Series -->
-      <article class="project-card type-tutorial"
-        data-type="tutorial" data-industry="fintech"
-        data-title="Developer Tutorial Series"
-        data-subtitle="Payments API Integration"
-        data-desc="Four Stripe-style tutorials: ACH transfers, webhook HMAC-SHA256 verification, sandbox return codes, and API key rotation.">
-        <div class="project-card-header">
-          <div class="project-card-badges">
-            <span class="badge badge-amber type-badge">Tutorial</span>
-            <span class="badge badge-slate">FinTech</span>
-          </div>
+      <!-- Developer Onboarding -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">Tutorial</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
         </div>
-        <div>
-          <h3 class="project-card-title">Developer Tutorial Series</h3>
-          <p class="project-card-subtitle">Payments API Integration</p>
-        </div>
-        <p class="project-card-desc">
-          Task-based tutorial series for Payments API integration. Covers ACH transfer creation,
-          webhook HMAC-SHA256 signature verification, sandbox return code testing, and
-          zero-downtime API key rotation — in Node.js, Python, and cURL.
-        </p>
-        <div class="project-card-techs">
-          <span class="tech-chip">Node.js</span>
-          <span class="tech-chip">Python</span>
-          <span class="tech-chip">cURL</span>
-          <span class="tech-chip">3 Languages</span>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-stats">
-            <span class="stat-chip">4 tutorials</span>
-            <span class="stat-chip">· Code tabs</span>
-          </div>
-          <a href="https://sulagnasasmal.github.io/payments-tutorial-series/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View Project →</a>
-        </div>
-      </article>
+        <a href="https://sulagnasasmal.github.io/developer-onboarding/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">Developer Onboarding ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">5-step sandbox-to-production flow — account setup, SDK, ACH, webhooks, go-live</span>
+      </div>
 
-      <!-- Card: Compliance & AML Training -->
-      <article class="project-card type-training"
-        data-type="training" data-industry="compliance"
-        data-title="Compliance &amp; AML Training"
-        data-subtitle="BSA · OFAC · AML · SAR"
-        data-desc="Role-based BSA/AML employee training with 4 modules, scenario-based content, and a 20-question certification knowledge check.">
-        <div class="project-card-header">
-          <div class="project-card-badges">
-            <span class="badge badge-indigo type-badge">Training</span>
-            <span class="badge badge-slate">Compliance</span>
-          </div>
+      <!-- VaultPay Payment API -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">API</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">FinTech</span>
         </div>
-        <div>
-          <h3 class="project-card-title">Compliance &amp; AML Training</h3>
-          <p class="project-card-subtitle">BSA · OFAC · AML · SAR</p>
-        </div>
-        <p class="project-card-desc">
-          Structured BSA/AML employee compliance training with role-based learning paths for
-          Compliance Officers, Operations, and Developers. Four full modules with scenario-based
-          content, regulatory context, and a 20-question certification knowledge check.
-        </p>
-        <div class="project-card-techs">
-          <span class="tech-chip">HTML</span>
-          <span class="tech-chip">CSS</span>
-          <span class="tech-chip">Role Paths</span>
-          <span class="tech-chip">Quiz Engine</span>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-stats">
-            <span class="stat-chip">4 modules</span>
-            <span class="stat-chip">· 20 Qs cert</span>
-          </div>
-          <a href="https://sulagnasasmal.github.io/aml-compliance-training/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View Project →</a>
-        </div>
-      </article>
+        <a href="https://sulagnasasmal.github.io/vaultpay-api-docs/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">VaultPay Payment API ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">Enterprise fintech REST API — PCI DSS, PSD2/SCA, BSA/AML coverage</span>
+      </div>
 
-      <!-- Card: Developer Onboarding -->
-      <article class="project-card type-tutorial"
-        data-type="tutorial" data-industry="fintech"
-        data-title="Developer Onboarding"
-        data-subtitle="Payments API — 5-Step Flow"
-        data-desc="Interactive 5-step developer onboarding: account setup, SDK install, first ACH call, webhook verification, and go-live checklist.">
-        <div class="project-card-header">
-          <div class="project-card-badges">
-            <span class="badge badge-amber type-badge">Tutorial</span>
-            <span class="badge badge-slate">FinTech</span>
-          </div>
+      <!-- CaseForge API -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-amber" style="font-size:10px; padding:2px 6px;">API</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">Compliance</span>
         </div>
-        <div>
-          <h3 class="project-card-title">Developer Onboarding</h3>
-          <p class="project-card-subtitle">Payments API — 5-Step Flow</p>
-        </div>
-        <p class="project-card-desc">
-          Interactive 5-step onboarding flow from sandbox to production. Covers account &amp; key
-          setup, SDK installation, first ACH transfer, webhook HMAC-SHA256 verification, and
-          a production go-live checklist with localStorage progress tracking.
-        </p>
-        <div class="project-card-techs">
-          <span class="tech-chip">HTML</span>
-          <span class="tech-chip">CSS</span>
-          <span class="tech-chip">Node.js</span>
-          <span class="tech-chip">Python</span>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-stats">
-            <span class="stat-chip">5 steps</span>
-            <span class="stat-chip">· Live checklist</span>
-          </div>
-          <a href="https://sulagnasasmal.github.io/developer-onboarding/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View Project →</a>
-        </div>
-      </article>
+        <a href="https://sulagnasasmal.github.io/caseforge-api-docs/caseforge-api-docs.html" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">CaseForge API ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">AML/compliance case management — SAR filing, audit trails, FinCEN integration</span>
+      </div>
 
-    </div>
+      <!-- FraudShield AI Engine -->
+      <div style="padding:1rem 0.5rem 1rem 0; border-bottom:1px solid var(--border);">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.3rem;">
+          <span class="badge badge-slate" style="font-size:10px; padding:2px 6px;">Enterprise</span>
+          <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em;">AI/ML</span>
+        </div>
+        <a href="https://sulagnasasmal.github.io/fraudshield-docs/" target="_blank" rel="noopener" style="font-weight:700; color:var(--text); text-decoration:none; font-size:var(--text-sm); display:block; margin-bottom:0.2rem;">FraudShield AI Engine ↗</a>
+        <span style="font-size:var(--text-xs); color:var(--text-secondary);">AI fraud detection docs — risk scoring, model explainability, REST API, compliance</span>
+      </div>
+
+    </div><!-- /writing-samples list -->
+    <!-- Hidden project-grid div retained for JS filter compatibility -->
+    <div class="project-grid" id="project-grid" style="display:none;"></div>
   </div>
 </section>
 
 <!-- ══════════════════════════════════════════════════════════
-     DOCCRAFT FEATURE STRIP
+     AI TOOLS TEASER STRIP
 ════════════════════════════════════════════════════════════ -->
-<div class="doccraft-strip">
+<div style="background: linear-gradient(135deg, var(--amber-light, #fffbeb) 0%, var(--bg-card, #fff) 100%); border-top: 2px solid rgba(217,119,6,0.18); border-bottom: 2px solid rgba(217,119,6,0.18); padding: 2.5rem 0;">
   <div class="container">
-    <div class="doccraft-inner">
-
-      <!-- Left: Content -->
-      <div class="doccraft-content">
-        <p class="doccraft-label">✨ AI-Powered Documentation</p>
-        <h2 class="doccraft-title">Generate Professional<br/>Docs with AI</h2>
-        <p class="doccraft-desc">
-          DocCraft AI uses GPT-4o to generate production-ready documentation
-          from your source files — with MSTP compliance checking, Mermaid
-          diagram generation, inline AI editing, and document history.
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.5rem;">
+      <div>
+        <p style="font-family:var(--font-mono); font-size:var(--text-xs); color:var(--amber); text-transform:uppercase; letter-spacing:.12em; margin-bottom:0.4rem;">🤖 Built Tools</p>
+        <h2 style="font-family:var(--font-display); font-weight:800; font-size:var(--text-2xl); color:var(--text); letter-spacing:-0.02em; margin-bottom:0.4rem;">AI &amp; Automation Tools</h2>
+        <p style="font-size:var(--text-sm); color:var(--text-secondary); max-width:520px;">
+          DocCraft AI · SpecFlow · DocQuery · DocPulse · PPT→MP4 — a separate portal for all AI-powered and automation tools I've built.
         </p>
-
-        <div class="doccraft-features">
-          <div class="doccraft-feature">
-            <span class="doccraft-feature-check">✓</span>
-            <span>5 documentation templates (API, Admin, KB, Tutorial, Release Notes)</span>
-          </div>
-          <div class="doccraft-feature">
-            <span class="doccraft-feature-check">✓</span>
-            <span>MSTP style compliance checker with inline suggestions</span>
-          </div>
-          <div class="doccraft-feature">
-            <span class="doccraft-feature-check">✓</span>
-            <span>Mermaid diagram auto-generation from text descriptions</span>
-          </div>
-          <div class="doccraft-feature">
-            <span class="doccraft-feature-check">✓</span>
-            <span>Live Markdown editor with split preview and export</span>
-          </div>
-        </div>
-
-        <a href="https://doccraft-ten.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener">
-          Open DocCraft AI ↗
-        </a>
       </div>
-
-      <!-- Right: Code mockup -->
-      <div class="doccraft-mockup">
-        <div class="doccraft-mockup-chrome">
-          <div class="doccraft-mockup-dots">
-            <span class="doccraft-mockup-dot"></span>
-            <span class="doccraft-mockup-dot"></span>
-            <span class="doccraft-mockup-dot"></span>
-          </div>
-          <span class="doccraft-mockup-title">DocCraft AI — Generated Output</span>
-        </div>
-        <div class="doccraft-mockup-body">
-          <div class="doccraft-code"><span class="dc-comment"># AI-generated — PayPlus API · Authentication</span>
-
-<span class="dc-heading">## Overview</span>
-
-<span class="dc-text">PayPlus uses </span><span class="dc-bold">OAuth 2.0</span><span class="dc-text"> with bearer tokens
-for all API requests. Tokens expire after
-</span><span class="dc-code">3600 seconds</span><span class="dc-text"> and must be refreshed.</span>
-
-<span class="dc-heading">## Quick Start</span>
-
-<span class="dc-code">POST /v1/oauth/token</span>
-
-<span class="dc-text">Request body:</span>
-<span class="dc-code">{
-  "client_id":     "your_id",
-  "client_secret": "your_secret",
-  "grant_type":    "client_credentials"
-}</span>
-
-<span class="dc-text">✓ </span><span class="dc-bold">MSTP-compliant</span><span class="dc-text"> · Diagrams ready</span></div>
-        </div>
+      <div style="display:flex; flex-direction:column; gap:0.75rem; align-items:flex-start;">
+        <a href="https://sulagnasasmal.github.io/ai-doc-tools/" class="btn btn-primary" target="_blank" rel="noopener">Explore AI Tools Portal ↗</a>
+        <a href="https://doccraft-ten.vercel.app/" style="font-size:var(--text-sm); color:var(--amber); text-decoration:none; font-family:var(--font-mono);" target="_blank" rel="noopener">→ DocCraft AI (live app)</a>
       </div>
-
     </div>
   </div>
 </div>
@@ -695,7 +363,7 @@ for all API requests. Tokens expire after
     <div class="footer-inner">
 
       <div class="footer-brand">
-        <div class="footer-logo">doc<span class="nav-brand-dot">·</span>portal</div>
+        <div class="footer-logo">DOC Portal</div>
         <p class="footer-tagline">
           A curated portfolio of API references, admin guides, knowledge bases,
           and AI-powered documentation tools by Sulagna Sasmal.
@@ -725,7 +393,7 @@ for all API requests. Tokens expire after
     </div>
 
     <div class="footer-bottom">
-      <span>© 2025 Sulagna Sasmal · Technical Writer &amp; Documentation Engineer</span>
+      <span>© 2026 Sulagna Sasmal · Technical Writer &amp; Documentation Engineer</span>
       <span style="font-family: var(--font-mono); font-size: var(--text-xs);">doc·portal v1.0</span>
     </div>
   </div>
