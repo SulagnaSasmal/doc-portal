@@ -75,3 +75,27 @@ Optional custom domain: add a `CNAME` file containing `docs.sulagnasasmal.com`.
 ---
 
 *Part of the technical writing portfolio at [sulagnasasmal.com](https://sulagnasasmal.com)*
+
+---
+
+## Status
+
+**Infrastructure — Documentation Hub — Live / Production**
+
+| Feature | Status |
+|---------|--------|
+| Filterable project grid | Complete |
+| Client-side fuzzy search | Complete |
+| Dark / light mode (theme.js) | Complete |
+| DocCraft AI featured section | Complete |
+| Responsive layout (3-col → 1-col) | Complete |
+| Terminal-style portal.json hero panel | Complete |
+| `projects.json` data manifest | Complete |
+
+## Pending / Future Enhancements
+
+- Add new repos to `data/projects.json` as they are published:
+  - `caseforge-sdk-docs`, `nexaflow-sdk-docs`, `developer-onboarding`, `aml-compliance-training`, `fraudshield-docs`
+- Analytics integration (DocPulse tracker embed)
+- Project status badges (live / in-progress / archived)
+- RSS feed of recently updated projects
