@@ -166,6 +166,27 @@
   height: 8px;
 }
 
+/* Featured card: bolder top bar + very subtle ambient tint */
+.card.is-featured .card-top-bar {
+  height: 8px;
+}
+
+.card.is-featured {
+  border-color: rgba(var(--tc-rgb, 217,119,6), 0.2);
+  box-shadow:
+    var(--shadow-card),
+    0 0 0 1px rgba(var(--tc-rgb, 217,119,6), 0.08) inset;
+}
+
+.card.is-featured:hover {
+  border-color: rgba(var(--tc-rgb, 217,119,6), 0.32);
+}
+
+.card.is-featured .featured-star {
+  opacity: 1;
+  color: var(--amber);
+}
+
 /* Card body */
 .card-body {
   padding: 1.25rem 1.25rem 1rem;
