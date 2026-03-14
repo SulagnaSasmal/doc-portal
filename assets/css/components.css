@@ -336,6 +336,20 @@
   transform: translateY(-1px);
 }
 
+/* GitHub fallback — muted style vs. amber Live button */
+.card-live.card-github {
+  background: var(--bg);
+  color: var(--text-secondary);
+  border: 1.5px solid var(--border);
+}
+
+.card-live.card-github:hover {
+  background: var(--bg-card);
+  color: var(--text);
+  border-color: var(--text-secondary);
+  transform: translateY(-1px);
+}
+
 /* Stagger animation — covers all 25 cards at 40ms intervals */
 .card:nth-child(1)  { animation-delay: 0.04s; }
 .card:nth-child(2)  { animation-delay: 0.08s; }

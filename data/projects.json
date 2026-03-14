@@ -38,14 +38,15 @@
     },
     {
       "id": "ppt2video",
-      "title": "PPT→MP4 Automation API",
+      "title": "PPT→MP4 Doc Automation",
       "subtitle": "PowerPoint to Narrated Video",
-      "description": "FastAPI application that converts PowerPoint presentations into narrated MP4 videos using Azure Text-to-Speech and FFmpeg. REST API with async job queue, webhook callbacks, and a polished dark-mode web interface.",
-      "type": "API Reference", "type_key": "api",
+      "description": "FastAPI application that converts PowerPoint presentations into narrated MP4 videos using Azure Text-to-Speech and FFmpeg. Features async job queue, webhook callbacks, REST endpoints, and a polished dark-mode web interface.",
+      "type": "Automation Tool", "type_key": "automation",
       "industry": "AI / ML", "industry_key": "aiml",
       "techs": ["Python", "FastAPI", "Azure TTS", "FFmpeg"],
       "featured": true,
       "live_url": null,
+      "github_url": "https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation",
       "stats": { "label1": "5 endpoints", "label2": "MP4 output" }
     },
     {
@@ -81,7 +82,8 @@
       "industry": "Developer Tools", "industry_key": "devtools",
       "techs": ["Markdown", "Node.js", "Python"],
       "featured": false,
-      "live_url": "https://sulagnasasmal.github.io/nexaflow-sdk-docs/",
+      "live_url": null,
+      "github_url": "https://github.com/SulagnaSasmal/nexaflow-sdk-docs",
       "stats": { "label1": "14 sections", "label2": "API Reference" }
     },
     {
@@ -178,19 +180,8 @@
       "techs": ["Markdown", "Mermaid"],
       "featured": false,
       "live_url": null,
+      "github_url": "https://github.com/SulagnaSasmal/us-ach-docs",
       "stats": { "label1": "8 files", "label2": "Mermaid diagrams" }
-    },
-    {
-      "id": "doccraft-help-center",
-      "title": "DocCraft Help Center",
-      "subtitle": "Self-Service Knowledge Base",
-      "description": "Full-featured help center for DocCraft AI: getting-started wizard, 20-item FAQ with search, troubleshooting guide, feature reference, workflow documentation, UI reference, and release notes from v1.0.0 through v1.4.0.",
-      "type": "Knowledge Base", "type_key": "kb",
-      "industry": "AI / ML", "industry_key": "aiml",
-      "techs": ["HTML", "CSS", "JavaScript"],
-      "featured": true,
-      "live_url": "https://sulagnasasmal.github.io/doccraft-help-center/",
-      "stats": { "label1": "7 pages", "label2": "20-item FAQ" }
     },
     {
       "id": "nicke-actimize",
@@ -241,6 +232,19 @@
       "stats": { "label1": "12 pages", "label2": "ML + Compliance" }
     },
     {
+      "id": "docs-content-strategy",
+      "title": "Docs Content Strategy",
+      "subtitle": "Documentation Strategy Framework",
+      "description": "Comprehensive documentation strategy and information architecture framework — the Phase 7 capstone. Covers style guide, audience analysis, IA guidelines, DITA-based topic taxonomy, reusable templates (API ref, how-to, concept, release notes), audit checklists, and health scorecards.",
+      "type": "Content Strategy", "type_key": "strategy",
+      "industry": "Developer Tools", "industry_key": "devtools",
+      "techs": ["Markdown", "DITA", "Vale", "GitHub"],
+      "featured": false,
+      "live_url": null,
+      "github_url": "https://github.com/SulagnaSasmal/docs-content-strategy",
+      "stats": { "label1": "Phase 7 / 7", "label2": "14 components" }
+    },
+    {
       "id": "doccraft",
       "title": "DocCraft AI",
       "subtitle": "AI Documentation Generator",
@@ -287,23 +291,13 @@
       "featured": true,
       "live_url": null,
       "stats": { "label1": "5 dashboard views", "label2": "Weekly reports" }
-    },
-    {
-      "id": "docs-content-strategy",
-      "title": "Docs Content Strategy",
-      "subtitle": "Documentation Strategy Framework",
-      "description": "Comprehensive documentation strategy and information architecture framework — the Phase 7 capstone. Covers style guide, audience analysis, IA guidelines, DITA-based topic taxonomy, reusable templates (API ref, how-to, concept, release notes), audit checklists, and health scorecards.",
-      "type": "Content Strategy", "type_key": "strategy",
-      "industry": "Developer Tools", "industry_key": "devtools",
-      "techs": ["Markdown", "DITA", "Vale", "GitHub"],
-      "featured": false,
-      "live_url": null,
-      "stats": { "label1": "Phase 7 / 7", "label2": "14 components" }
     }
   ],
   "meta": {
-    "total": 25,
-    "types": ["API Reference", "SDK Docs", "Admin Guide", "Onboarding", "Tutorial", "Training", "Knowledge Base", "Enterprise Docs", "AI Tool", "Content Strategy"],
+    "total": 24,
+    "doc_projects": 20,
+    "ai_tools": 4,
+    "types": ["API Reference", "SDK Docs", "Admin Guide", "Onboarding", "Tutorial", "Training", "Knowledge Base", "Enterprise Docs", "Automation Tool", "Content Strategy"],
     "industries": ["FinTech", "Compliance", "Enterprise", "AI / ML", "Developer Tools"],
     "owner": "Sulagna Sasmal",
     "portfolio": "https://sulagnasasmal.com",

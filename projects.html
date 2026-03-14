@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects — Sulagna Sasmal · Documentation Portfolio</title>
-  <meta name="description" content="25 documentation projects: API references, SDK guides, tutorials, enterprise docs, compliance training, and AI tools by Sulagna Sasmal." />
+  <meta name="description" content="20 documentation projects: API references, SDK guides, tutorials, enterprise docs, compliance training, and more by Sulagna Sasmal." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>📚</text></svg>" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
@@ -13,9 +13,6 @@
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════════════════
-     NAV
-════════════════════════════════════════════════════════════ -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">DOC Portal</a>
@@ -31,26 +28,20 @@
   </div>
 </nav>
 
-<!-- ══════════════════════════════════════════════════════════
-     STICKY TOPBAR — title + stats + search + filter pills
-════════════════════════════════════════════════════════════ -->
+<!-- ── STICKY TOPBAR ── -->
 <div class="projects-topbar">
   <div class="container">
-
     <div class="topbar-row">
-      <!-- Title + live stats -->
       <div class="topbar-meta">
-        <span class="topbar-title">All Projects</span>
+        <span class="topbar-title">Documentation Projects</span>
         <div class="topbar-stats">
           <span id="count-stat" class="topbar-count">—</span>
           <span class="topbar-sep">·</span>
-          <span class="topbar-dim">7 doc types</span>
+          <span class="topbar-dim">9 doc types</span>
           <span class="topbar-sep">·</span>
           <span class="topbar-dim">5 industries</span>
         </div>
       </div>
-
-      <!-- Search -->
       <div class="topbar-search-wrap">
         <svg class="topbar-search-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"/>
@@ -66,21 +57,16 @@
         <button class="topbar-search-clear hidden" id="q-clear" aria-label="Clear search">×</button>
       </div>
     </div>
-
-    <!-- Filter pills: type | industry | clear -->
     <div class="filter-pills-row">
       <div id="type-pills" class="filter-pills" role="group" aria-label="Filter by type"></div>
       <div class="filter-pills-divider"></div>
       <div id="industry-pills" class="filter-pills" role="group" aria-label="Filter by industry"></div>
       <button class="pill-clear hidden" id="clear-btn" aria-label="Clear all filters">✕ Clear</button>
     </div>
-
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════════
-     CARD GRID — full width
-════════════════════════════════════════════════════════════ -->
+<!-- ── GRID ── -->
 <div class="container projects-main">
   <div id="grid" role="list" aria-label="Documentation projects"></div>
 
@@ -90,11 +76,29 @@
     <p class="empty-sub">Try a different keyword or remove the active filter.</p>
     <button class="empty-reset" onclick="resetAll()">Show all projects</button>
   </div>
+
+  <!-- ── AI TOOLS REFERENCE BOX ── -->
+  <div class="ai-tools-ref-box" id="ai-tools-ref">
+    <div class="ai-tools-ref-inner">
+      <div class="ai-tools-ref-left">
+        <span class="ai-tools-ref-eyebrow">Also in this portfolio</span>
+        <h3 class="ai-tools-ref-title">4 AI-Powered Documentation Tools</h3>
+        <p class="ai-tools-ref-desc">Beyond these docs projects, I've built a suite of AI tools that solve real documentation engineering problems.</p>
+        <div class="ai-tools-ref-chips">
+          <span class="ai-tools-ref-chip">🤖 DocCraft AI</span>
+          <span class="ai-tools-ref-chip">⚡ SpecFlow</span>
+          <span class="ai-tools-ref-chip">💬 DocQuery</span>
+          <span class="ai-tools-ref-chip">📊 DocPulse</span>
+        </div>
+      </div>
+      <a href="https://sulagnasasmal.github.io/ai-doc-tools/" class="ai-tools-ref-cta" target="_blank" rel="noopener">
+        Visit AI Tools Portal ↗
+      </a>
+    </div>
+  </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════════════════════════ -->
+<!-- ── FOOTER ── -->
 <footer class="footer">
   <div class="container">
     <div class="footer-inner">
@@ -109,7 +113,7 @@
           <li><a href="projects.html?type=sdk" class="footer-link">SDK Docs</a></li>
           <li><a href="projects.html?type=admin" class="footer-link">Admin Guides</a></li>
           <li><a href="projects.html?type=kb" class="footer-link">Knowledge Bases</a></li>
-          <li><a href="projects.html?type=ai-tool" class="footer-link">AI Tools</a></li>
+          <li><a href="projects.html?type=enterprise" class="footer-link">Enterprise Docs</a></li>
         </ul>
       </div>
       <div>
@@ -127,9 +131,6 @@
 <script>
 (function(){
 
-/* ══════════════════════════════════════════════════════════
-   TYPE MAP
-   ══════════════════════════════════════════════════════════ */
 var TM = {
   'api':        { l:'API Reference',    c:'#d97706', b:'rgba(217,119,6,0.13)',  rgb:'217,119,6'   },
   'sdk':        { l:'SDK Docs',         c:'#4c6ef5', b:'rgba(76,110,245,0.13)', rgb:'76,110,245'  },
@@ -139,7 +140,7 @@ var TM = {
   'training':   { l:'Training',         c:'#7c3aed', b:'rgba(124,58,237,0.13)', rgb:'124,58,237'  },
   'kb':         { l:'Knowledge Base',   c:'#1d4ed8', b:'rgba(29,78,216,0.13)',  rgb:'29,78,216'   },
   'enterprise': { l:'Enterprise Docs',  c:'#475569', b:'rgba(71,85,105,0.13)',  rgb:'71,85,105'   },
-  'ai-tool':    { l:'AI Tool',          c:'#6d28d9', b:'rgba(109,40,217,0.13)', rgb:'109,40,217'  },
+  'automation': { l:'Automation Tool',  c:'#0891b2', b:'rgba(8,145,178,0.13)',  rgb:'8,145,178'   },
   'strategy':   { l:'Content Strategy', c:'#ea580c', b:'rgba(234,88,12,0.13)',  rgb:'234,88,12'   }
 };
 
@@ -151,15 +152,14 @@ var IM = {
   'devtools':   { l:'Developer Tools', c:'#059669' }
 };
 
-var TYPE_ORDER = ['api','sdk','admin','onboarding','tutorial','training','kb','enterprise','ai-tool','strategy'];
+/* ai-tool is excluded from this page — shown in AI Tools portal only */
+var TYPE_ORDER = ['api','sdk','admin','onboarding','tutorial','training','kb','enterprise','automation','strategy'];
 var IND_ORDER  = ['fintech','compliance','enterprise','aiml','devtools'];
 
-var ALL = [], AT = 'all', AI = 'all', SQ = '';
+var ALL = [], DOC = [], AT = 'all', AI = 'all', SQ = '';
 
-/* ── Escape HTML ── */
 function e(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-/* ── Match predicate ── */
 function match(p){
   if(AT !== 'all' && p.type_key !== AT) return false;
   if(AI !== 'all' && p.industry_key !== AI) return false;
@@ -171,7 +171,6 @@ function match(p){
   return true;
 }
 
-/* ── Sort: featured first, then by type order ── */
 function sortProjects(arr){
   return arr.slice().sort(function(a,b){
     if(a.featured && !b.featured) return -1;
@@ -180,7 +179,6 @@ function sortProjects(arr){
   });
 }
 
-/* ── Build filter pills into a container ── */
 function buildPills(containerId, order, map, cnt, activeKey, onClickFn){
   var wrap = document.getElementById(containerId);
   if(!wrap) return;
@@ -210,17 +208,16 @@ function buildPills(containerId, order, map, cnt, activeKey, onClickFn){
 
 function buildTypePills(){
   var cnt = {};
-  ALL.forEach(function(p){ cnt[p.type_key] = (cnt[p.type_key]||0) + 1; });
+  DOC.forEach(function(p){ cnt[p.type_key] = (cnt[p.type_key]||0) + 1; });
   buildPills('type-pills', TYPE_ORDER, TM, cnt, AT, function(k){ AT = k; apply(); });
 }
 
 function buildIndustryPills(){
   var cnt = {};
-  ALL.forEach(function(p){ cnt[p.industry_key] = (cnt[p.industry_key]||0) + 1; });
+  DOC.forEach(function(p){ cnt[p.industry_key] = (cnt[p.industry_key]||0) + 1; });
   buildPills('industry-pills', IND_ORDER, IM, cnt, AI, function(k){ AI = k; apply(); });
 }
 
-/* ── Refresh active state on existing pills ── */
 function refreshPills(){
   document.querySelectorAll('#type-pills .filter-pill').forEach(function(btn){
     btn.classList.toggle('active', btn.dataset.key === AT);
@@ -230,7 +227,6 @@ function refreshPills(){
   });
 }
 
-/* ── Build a project card ── */
 function card(p){
   var m = TM[p.type_key] || { l:p.type, c:'#888', b:'rgba(136,136,136,0.1)', rgb:'136,136,136' };
   var isFeatured = p.featured === true;
@@ -244,9 +240,13 @@ function card(p){
     .map(function(s){ return '<span class="stat-pill">' + e(s) + '</span>'; })
     .join('');
 
-  var liveBtn = p.live_url
-    ? '<a href="' + e(p.live_url) + '" class="card-live" target="_blank" rel="noopener">Live ↗</a>'
-    : '';
+  /* Live > GitHub > nothing */
+  var linkBtn = '';
+  if(p.live_url){
+    linkBtn = '<a href="' + e(p.live_url) + '" class="card-live" target="_blank" rel="noopener">Live ↗</a>';
+  } else if(p.github_url){
+    linkBtn = '<a href="' + e(p.github_url) + '" class="card-live card-github" target="_blank" rel="noopener">GitHub ↗</a>';
+  }
 
   var starHtml = isFeatured ? '<span class="featured-star" title="Featured project">★</span>' : '';
 
@@ -270,38 +270,38 @@ function card(p){
       '<div class="card-techs">' + techs + '</div>' +
       '<div class="card-footer">' +
         '<div class="card-stats">' + stats + '</div>' +
-        liveBtn +
+        linkBtn +
       '</div>' +
     '</div>';
 
   return el;
 }
 
-/* ── Apply filters and re-render ── */
 function apply(){
   refreshPills();
-
-  var sorted = sortProjects(ALL);
+  var sorted = sortProjects(DOC);
   var vis = sorted.filter(match);
   var g = document.getElementById('grid');
   g.innerHTML = '';
   vis.forEach(function(p){ g.appendChild(card(p)); });
 
   var isFiltered = AT !== 'all' || AI !== 'all' || SQ.length > 0;
-
   var countEl = document.getElementById('count-stat');
   if(countEl){
     countEl.textContent = isFiltered
-      ? vis.length + ' of ' + ALL.length
-      : ALL.length;
+      ? vis.length + ' of ' + DOC.length
+      : DOC.length;
   }
 
   document.getElementById('clear-btn').classList.toggle('hidden', !isFiltered);
   document.getElementById('empty').hidden = vis.length > 0;
   g.hidden = vis.length === 0;
+
+  /* Hide AI tools ref box when a type filter is active (keep clean) */
+  var refBox = document.getElementById('ai-tools-ref');
+  if(refBox) refBox.style.display = (AT !== 'all') ? 'none' : '';
 }
 
-/* ── Reset all filters ── */
 function resetAll(){
   AT = 'all'; AI = 'all'; SQ = '';
   var qEl = document.getElementById('q');
@@ -310,7 +310,6 @@ function resetAll(){
   apply();
 }
 
-/* ── Events ── */
 document.getElementById('clear-btn').addEventListener('click', resetAll);
 
 var searchTimer;
@@ -329,15 +328,11 @@ document.getElementById('q-clear').addEventListener('click', function(){
 
 document.addEventListener('keydown', function(ev){
   if(ev.key === '/' && document.activeElement !== qEl){
-    ev.preventDefault();
-    qEl.focus();
+    ev.preventDefault(); qEl.focus();
   }
-  if(ev.key === 'Escape' && document.activeElement === qEl){
-    qEl.blur();
-  }
+  if(ev.key === 'Escape' && document.activeElement === qEl){ qEl.blur(); }
 });
 
-/* ── URL param: ?type=api to pre-select ── */
 function applyURLParams(){
   var params = new URLSearchParams(window.location.search);
   var t   = params.get('type');
@@ -346,11 +341,12 @@ function applyURLParams(){
   if(ind && IM[ind]) AI = ind;
 }
 
-/* ── Load projects ── */
 fetch('data/projects.json')
   .then(function(r){ return r.json(); })
   .then(function(d){
     ALL = d.projects || [];
+    /* DOC = all non-AI-tool projects shown on this page */
+    DOC = ALL.filter(function(p){ return p.type_key !== 'ai-tool'; });
     applyURLParams();
     buildTypePills();
     buildIndustryPills();
