@@ -8,398 +8,21 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>📚</text></svg>" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
   <script src="assets/js/theme.js"></script>
-  <style>
-    /* ── Page Hero ─────────────────────────────────────────────────────────── */
-    .page-hero {
-      border-bottom: 1px solid var(--border-light);
-      padding: 2.75rem 0 2.25rem;
-      background: var(--bg-card);
-    }
-    .page-hero .container {
-      max-width: var(--content-max);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    .page-hero h1 {
-      font-family: var(--font-display);
-      font-size: var(--text-3xl);
-      font-weight: 800;
-      color: var(--text);
-      letter-spacing: -0.03em;
-    }
-    .page-hero p {
-      font-size: var(--text-base);
-      color: var(--text-secondary);
-      margin-top: 0.4rem;
-    }
-    .hero-meta {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
-    }
-    .hero-stat { font-size: var(--text-sm); color: var(--text-muted); }
-    .hero-stat strong { color: var(--amber); font-weight: 700; }
-
-    /* ── Main layout ───────────────────────────────────────────────────────── */
-    .projects-main { padding: 0 0 5rem; }
-    .projects-main .container {
-      max-width: var(--content-max);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* ── Sticky Filter Bar ─────────────────────────────────────────────────── */
-    .filter-bar {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      background: rgba(var(--bg-card-rgb, 255,255,255), 0.82);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-light);
-      padding: 1rem 0 0.85rem;
-      margin-bottom: 2rem;
-    }
-    [data-theme="dark"] .filter-bar {
-      background: rgba(17, 17, 27, 0.82);
-    }
-    .filter-top {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.85rem;
-    }
-    .search-wrap { position: relative; flex: 1; min-width: 220px; max-width: 480px; }
-    .search-icon {
-      position: absolute;
-      left: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-      pointer-events: none;
-      width: 16px;
-      height: 16px;
-    }
-    #q {
-      width: 100%;
-      padding: 0.62rem 2.5rem 0.62rem 2.5rem;
-      font-size: var(--text-sm);
-      font-family: var(--font-body);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-md);
-      background: var(--bg-card);
-      color: var(--text);
-      outline: none;
-      transition: border-color var(--duration), box-shadow var(--duration);
-    }
-    #q:focus {
-      border-color: var(--amber);
-      box-shadow: 0 0 0 3px var(--amber-ring);
-    }
-    #q::placeholder { color: var(--text-muted); }
-    .search-clear {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--border);
-      color: var(--text-secondary);
-      font-size: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background var(--duration);
-      border: none;
-      cursor: pointer;
-      line-height: 1;
-    }
-    .search-clear:hover { background: var(--border-light); }
-    .search-clear.hidden { display: none; }
-
-    .results-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-left: auto;
-      flex-shrink: 0;
-    }
-    #count { font-size: var(--text-sm); color: var(--text-muted); white-space: nowrap; }
-    .reset-btn {
-      font-size: var(--text-sm);
-      color: var(--amber);
-      font-weight: 600;
-      padding: 0.25rem 0.65rem;
-      background: none;
-      border: 1.5px solid var(--amber);
-      border-radius: var(--radius-full);
-      cursor: pointer;
-      transition: background var(--duration), color var(--duration);
-      white-space: nowrap;
-      line-height: 1.4;
-    }
-    .reset-btn:hover { background: var(--amber); color: #fff; }
-    .reset-btn.hidden { display: none; }
-
-    /* ── Chips Row ─────────────────────────────────────────────────────────── */
-    .chips-row {
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-      overflow-x: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      padding-bottom: 2px;
-    }
-    .chips-row::-webkit-scrollbar { display: none; }
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.32rem;
-      padding: 0.38rem 0.95rem;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      white-space: nowrap;
-      border: 1.5px solid var(--border);
-      background: var(--bg-card);
-      color: var(--text-secondary);
-      cursor: pointer;
-      transition: all 0.15s;
-      line-height: 1;
-      flex-shrink: 0;
-    }
-    .chip:hover { border-color: var(--amber); color: var(--text); }
-    .chip.active {
-      background: var(--amber);
-      border-color: var(--amber);
-      color: #fff;
-      box-shadow: 0 0 0 3px var(--amber-ring);
-    }
-    .chip .cn {
-      font-size: 0.65rem;
-      font-weight: 700;
-      opacity: 0.75;
-      background: rgba(0,0,0,0.12);
-      border-radius: 99px;
-      padding: 0.1rem 0.38rem;
-      min-width: 1.3rem;
-      text-align: center;
-    }
-    .chip.active .cn { background: rgba(255,255,255,0.28); opacity: 1; }
-
-    /* ── Project Grid ──────────────────────────────────────────────────────── */
-    #grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      align-items: start;
-    }
-    #grid[hidden] { display: none; }
-    @media (max-width: 1024px) { #grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 640px)  { #grid { grid-template-columns: 1fr; } }
-
-    /* ── Project Card ──────────────────────────────────────────────────────── */
-    .project-card {
-      position: relative;
-      background: var(--bg-card);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: box-shadow var(--duration), transform var(--duration), border-color var(--duration);
-    }
-    /* Left-side colored border via ::before */
-    .project-card::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: var(--tc, var(--amber));
-      border-radius: var(--radius-lg) 0 0 var(--radius-lg);
-      flex-shrink: 0;
-    }
-    .project-card:hover {
-      box-shadow: var(--shadow-hover);
-      transform: translateY(-3px);
-      border-color: var(--border);
-    }
-    /* Featured card tinted border */
-    .project-card.featured {
-      border-color: var(--tc-border, var(--border-light));
-    }
-
-    /* Card body — extra left padding to clear the 4px border */
-    .card-body {
-      padding: 1.5rem 1.5rem 1.25rem 1.75rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .card-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 0.6rem;
-      margin-bottom: 0.8rem;
-    }
-    .card-top-left {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-    .type-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.22rem 0.65rem;
-      border-radius: var(--radius-full);
-      font-size: 0.67rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .featured-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.2rem;
-      padding: 0.18rem 0.55rem;
-      border-radius: var(--radius-full);
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      background: rgba(217,119,6,0.13);
-      color: #d97706;
-      white-space: nowrap;
-      width: fit-content;
-    }
-    [data-theme="dark"] .featured-badge { background: rgba(217,119,6,0.22); color: #f59e0b; }
-
-    .card-title {
-      font-family: var(--font-display);
-      font-size: 0.975rem;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.3;
-      margin-bottom: 0.2rem;
-    }
-    .card-sub {
-      font-size: var(--text-xs);
-      font-weight: 600;
-      color: var(--tc, var(--amber));
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.7rem;
-    }
-    .card-desc {
-      font-size: var(--text-sm);
-      color: var(--text-secondary);
-      line-height: 1.55;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      flex: 1;
-      margin-bottom: 1rem;
-    }
-    .card-techs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      margin-bottom: 0.9rem;
-    }
-    .tech-chip {
-      font-size: 0.67rem;
-      font-weight: 500;
-      padding: 0.14rem 0.5rem;
-      border-radius: var(--radius-sm);
-      background: var(--bg-subtle);
-      color: var(--text-secondary);
-      border: 1px solid var(--border-light);
-    }
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 0.75rem;
-      border-top: 1px solid var(--border-light);
-      margin-top: auto;
-      gap: 0.75rem;
-    }
-    .card-stats { display: flex; gap: 0; flex-wrap: wrap; }
-    .stat-pill { font-size: 0.67rem; color: var(--text-muted); font-weight: 500; }
-    .stat-pill + .stat-pill::before { content: ' · '; color: var(--border); }
-
-    /* Live link — amber pill button */
-    .card-live {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.2rem;
-      padding: 0.28rem 0.75rem;
-      border-radius: 40px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      background: var(--amber);
-      color: #fff;
-      text-decoration: none;
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: background var(--duration), transform var(--duration);
-      border: none;
-    }
-    .card-live:hover {
-      background: var(--amber-hover);
-      transform: translateY(-1px);
-    }
-
-    /* ── Empty state ───────────────────────────────────────────────────────── */
-    #empty { text-align: center; padding: 4rem 1rem; }
-    #empty[hidden] { display: none; }
-    .empty-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-    .empty-title {
-      font-family: var(--font-display);
-      font-size: var(--text-xl);
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.4rem;
-    }
-    .empty-sub { font-size: var(--text-sm); color: var(--text-muted); margin-bottom: 1.5rem; }
-    .empty-reset {
-      padding: 0.6rem 1.5rem;
-      background: var(--amber);
-      color: #fff;
-      border-radius: var(--radius-md);
-      font-size: var(--text-sm);
-      font-weight: 600;
-      cursor: pointer;
-      border: none;
-      transition: background var(--duration);
-    }
-    .empty-reset:hover { background: var(--amber-hover); }
-  </style>
 </head>
 <body>
 
+<!-- ══════════════════════════════════════════════════════════
+     NAV
+════════════════════════════════════════════════════════════ -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">DOC Portal</a>
     <div class="nav-links">
       <a href="index.html" class="nav-link">Home</a>
       <a href="projects.html" class="nav-link active">Projects</a>
-      <a href="https://sulagnasasmal.github.io/ai-doc-tools/" class="nav-link nav-link-external" target="_blank" rel="noopener">AI Tools ↗</a>
+      <a href="https://sulagnasasmal.github.io/ai-doc-tools/" class="nav-link nav-link-external" target="_blank" rel="noopener">AI Tools</a>
       <a href="https://sulagnasasmal.com/" class="nav-link nav-link-external" target="_blank" rel="noopener">Portfolio</a>
     </div>
     <div class="nav-actions">
@@ -408,37 +31,99 @@
   </div>
 </nav>
 
-<div class="page-hero">
+<!-- ══════════════════════════════════════════════════════════
+     PAGE HERO (compact)
+════════════════════════════════════════════════════════════ -->
+<div style="background:var(--bg-card); border-bottom:1px solid var(--border-light); padding:2rem 0 1.75rem;">
   <div class="container">
-    <h1>All Projects</h1>
-    <p>API references, SDK guides, tutorials, enterprise documentation, compliance training, and AI tools.</p>
-    <div class="hero-meta">
-      <span class="hero-stat"><strong id="total-count">25</strong> projects</span>
-      <span class="hero-stat"><strong>7</strong> documentation phases</span>
-      <span class="hero-stat"><strong>5</strong> AI tools</span>
-    </div>
+    <span style="font-family:var(--font-mono); font-size:0.68rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--amber);">Documentation Portfolio</span>
+    <h1 style="font-family:var(--font-display); font-size:var(--text-3xl); font-weight:800; color:var(--text); letter-spacing:-0.03em; margin-top:0.3rem; margin-bottom:0.3rem;">All Projects</h1>
+    <p style="font-size:var(--text-base); color:var(--text-secondary);">API references, SDK guides, tutorials, enterprise docs, compliance training, and AI tools.</p>
   </div>
 </div>
 
-<main class="projects-main">
-  <div class="container">
+<!-- ══════════════════════════════════════════════════════════
+     MAIN: SIDEBAR + CONTENT
+════════════════════════════════════════════════════════════ -->
+<div class="projects-layout">
 
-    <div class="filter-bar">
-      <div class="filter-top">
-        <div class="search-wrap">
-          <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"/></svg>
-          <input type="search" id="q" placeholder="Search by title, technology, or keyword…" autocomplete="off" />
-          <button class="search-clear hidden" id="q-clear" aria-label="Clear">×</button>
-        </div>
-        <div class="results-meta">
-          <span id="count"></span>
-          <button class="reset-btn hidden" id="reset-btn">Clear filters</button>
-        </div>
+  <!-- ── Sidebar ── -->
+  <aside class="projects-sidebar" aria-label="Filter projects">
+
+    <!-- Search -->
+    <div class="sidebar-search">
+      <div class="sidebar-search-wrap">
+        <svg class="sidebar-search-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"/>
+        </svg>
+        <input
+          type="search"
+          class="sidebar-search-input"
+          id="q"
+          placeholder="Search projects… (or press /)"
+          autocomplete="off"
+          aria-label="Search projects"
+        />
+        <button class="sidebar-search-clear hidden" id="q-clear" aria-label="Clear search">×</button>
       </div>
-      <div class="chips-row" id="chips" role="group" aria-label="Filter by type"></div>
     </div>
 
+    <!-- By Type -->
+    <div class="sidebar-section">
+      <p class="sidebar-section-label">By Type</p>
+      <div id="type-filters" role="group" aria-label="Filter by type"></div>
+    </div>
+
+    <!-- By Industry -->
+    <div class="sidebar-section">
+      <p class="sidebar-section-label">By Industry</p>
+      <div id="industry-filters" role="group" aria-label="Filter by industry"></div>
+    </div>
+
+    <!-- Clear filters -->
+    <button class="sidebar-clear hidden" id="clear-btn" aria-label="Clear all filters">
+      ✕ Clear all filters
+    </button>
+
+  </aside>
+
+  <!-- ── Main content ── -->
+  <main class="projects-content" role="main">
+
+    <!-- Mobile: toggle button (hidden on desktop) -->
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; gap:1rem; flex-wrap:wrap;">
+      <button class="sidebar-mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-filter-panel">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2.628 1.601C5.028 1.206 7.49 1 10 1s4.973.206 7.372.601a.75.75 0 01.628.74v2.288a2.25 2.25 0 01-.659 1.59l-4.682 4.683a2.25 2.25 0 00-.659 1.59v3.037c0 .684-.31 1.33-.844 1.757l-1.937 1.55A.75.75 0 018 18.25v-5.757a2.25 2.25 0 00-.659-1.591L2.659 6.22A2.25 2.25 0 012 4.629V2.34a.75.75 0 01.628-.74z" clip-rule="evenodd"/></svg>
+        Filters
+        <span id="mobile-toggle-arrow" style="font-size:0.7rem;">▾</span>
+      </button>
+      <div style="display:flex; align-items:center; gap:0.4rem; font-size:0.72rem; font-family:var(--font-mono); color:var(--text-muted);">
+        <span id="count"></span>
+      </div>
+    </div>
+
+    <!-- Mobile filter panel -->
+    <div class="sidebar-mobile-panel" id="mobile-filter-panel" role="region" aria-label="Mobile filter panel">
+      <div class="sidebar-mobile-col">
+        <p class="sidebar-section-label" style="margin-bottom:0.5rem;">By Type</p>
+        <div id="mobile-type-filters"></div>
+      </div>
+      <div class="sidebar-mobile-col">
+        <p class="sidebar-section-label" style="margin-bottom:0.5rem;">By Industry</p>
+        <div id="mobile-industry-filters"></div>
+      </div>
+    </div>
+
+    <!-- Content header row (desktop) -->
+    <div class="projects-content-header" style="display:none;" id="desktop-header">
+      <p class="projects-count-text"><strong id="count-desktop">—</strong> <span id="count-of-text">projects</span></p>
+      <span class="projects-sort">Featured first</span>
+    </div>
+
+    <!-- Grid -->
     <div id="grid" role="list" aria-label="Documentation projects"></div>
+
+    <!-- Empty state -->
     <div id="empty" hidden>
       <div class="empty-icon">🔍</div>
       <p class="empty-title">No projects found</p>
@@ -446,121 +131,331 @@
       <button class="empty-reset" onclick="resetAll()">Show all projects</button>
     </div>
 
+  </main>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">DOC Portal</div>
+        <p class="footer-tagline">A curated portfolio of API references, admin guides, knowledge bases, and AI-powered documentation tools by Sulagna Sasmal.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Projects</p>
+        <ul class="footer-links">
+          <li><a href="projects.html?type=api" class="footer-link">API References</a></li>
+          <li><a href="projects.html?type=sdk" class="footer-link">SDK Docs</a></li>
+          <li><a href="projects.html?type=admin" class="footer-link">Admin Guides</a></li>
+          <li><a href="projects.html?type=kb" class="footer-link">Knowledge Bases</a></li>
+          <li><a href="projects.html?type=ai-tool" class="footer-link">AI Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Connect</p>
+        <ul class="footer-links">
+          <li><a href="https://sulagnasasmal.com/" class="footer-link" target="_blank" rel="noopener">Portfolio ↗</a></li>
+          <li><a href="https://github.com/sulagnasasmal" class="footer-link" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="https://doccraft-ten.vercel.app/" class="footer-link" target="_blank" rel="noopener">DocCraft AI ↗</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-</main>
+</footer>
 
 <script>
-var TM={
-  'api':        {l:'API Reference',    c:'#d97706',b:'rgba(217,119,6,0.12)'  },
-  'sdk':        {l:'SDK Docs',         c:'#4c6ef5',b:'rgba(76,110,245,0.12)' },
-  'admin':      {l:'Admin Guide',      c:'#0d9488',b:'rgba(13,148,136,0.12)' },
-  'onboarding': {l:'Onboarding',       c:'#0284c7',b:'rgba(2,132,199,0.12)'  },
-  'tutorial':   {l:'Tutorial',         c:'#059669',b:'rgba(5,150,105,0.12)'  },
-  'training':   {l:'Training',         c:'#7c3aed',b:'rgba(124,58,237,0.12)' },
-  'kb':         {l:'Knowledge Base',   c:'#1d4ed8',b:'rgba(29,78,216,0.12)'  },
-  'enterprise': {l:'Enterprise Docs',  c:'#475569',b:'rgba(71,85,105,0.12)'  },
-  'ai-tool':    {l:'AI Tool',          c:'#6d28d9',b:'rgba(109,40,217,0.12)' },
-  'strategy':   {l:'Content Strategy', c:'#ea580c',b:'rgba(234,88,12,0.12)'  }
+(function(){
+/* ══════════════════════════════════════════════════════════
+   TYPE MAP
+   ══════════════════════════════════════════════════════════ */
+var TM = {
+  'api':        { l:'API Reference',    c:'#d97706', b:'rgba(217,119,6,0.13)',  rgb:'217,119,6'   },
+  'sdk':        { l:'SDK Docs',         c:'#4c6ef5', b:'rgba(76,110,245,0.13)', rgb:'76,110,245'  },
+  'admin':      { l:'Admin Guide',      c:'#0d9488', b:'rgba(13,148,136,0.13)', rgb:'13,148,136'  },
+  'onboarding': { l:'Onboarding',       c:'#0284c7', b:'rgba(2,132,199,0.13)',  rgb:'2,132,199'   },
+  'tutorial':   { l:'Tutorial',         c:'#059669', b:'rgba(5,150,105,0.13)',  rgb:'5,150,105'   },
+  'training':   { l:'Training',         c:'#7c3aed', b:'rgba(124,58,237,0.13)', rgb:'124,58,237'  },
+  'kb':         { l:'Knowledge Base',   c:'#1d4ed8', b:'rgba(29,78,216,0.13)',  rgb:'29,78,216'   },
+  'enterprise': { l:'Enterprise Docs',  c:'#475569', b:'rgba(71,85,105,0.13)',  rgb:'71,85,105'   },
+  'ai-tool':    { l:'AI Tool',          c:'#6d28d9', b:'rgba(109,40,217,0.13)', rgb:'109,40,217'  },
+  'strategy':   { l:'Content Strategy', c:'#ea580c', b:'rgba(234,88,12,0.13)',  rgb:'234,88,12'   }
 };
-var ALL=[],AT='all',SQ='';
-var ORDER=['api','sdk','admin','onboarding','tutorial','training','kb','enterprise','ai-tool','strategy'];
 
-function e(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+/* Industry colors */
+var IM = {
+  'fintech':    { l:'FinTech',          c:'#0284c7' },
+  'compliance': { l:'Compliance',       c:'#dc2626' },
+  'enterprise': { l:'Enterprise',       c:'#475569' },
+  'aiml':       { l:'AI / ML',          c:'#6d28d9' },
+  'devtools':   { l:'Developer Tools',  c:'#059669' }
+};
 
+var TYPE_ORDER = ['api','sdk','admin','onboarding','tutorial','training','kb','enterprise','ai-tool','strategy'];
+var IND_ORDER  = ['fintech','compliance','enterprise','aiml','devtools'];
+
+var ALL = [], AT = 'all', AI = 'all', SQ = '';
+
+/* ── Escape HTML ── */
+function e(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+/* ── Match predicate ── */
 function match(p){
-  if(AT!=='all'&&p.type_key!==AT)return false;
-  if(SQ){var idx=[p.title,p.subtitle,p.description,p.type,p.industry].concat(p.techs||[]).join(' ').toLowerCase();return SQ.trim().split(/\s+/).every(function(w){return idx.indexOf(w)>=0;});}
+  if(AT !== 'all' && p.type_key !== AT) return false;
+  if(AI !== 'all' && p.industry_key !== AI) return false;
+  if(SQ){
+    var idx = [p.title, p.subtitle, p.description, p.type, p.industry]
+      .concat(p.techs || []).join(' ').toLowerCase();
+    return SQ.trim().split(/\s+/).every(function(w){ return idx.indexOf(w) >= 0; });
+  }
   return true;
 }
 
-function buildChips(){
-  var cnt={};ALL.forEach(function(p){cnt[p.type_key]=(cnt[p.type_key]||0)+1;});
-  var c=document.getElementById('chips');c.innerHTML='';
-  function chip(key,label,count){
-    var b=document.createElement('button');
-    b.className='chip'+(AT===key?' active':'');b.dataset.type=key;
-    b.innerHTML=e(label)+' <span class="cn">'+count+'</span>';
-    b.onclick=function(){AT=key;apply();};c.appendChild(b);
-  }
-  chip('all','All',ALL.length);
-  ORDER.forEach(function(k){if(cnt[k]){var m=TM[k]||{l:k};chip(k,m.l,cnt[k]);}});
+/* ── Sort: featured first, then by type order ── */
+function sortProjects(arr){
+  return arr.slice().sort(function(a,b){
+    if(a.featured && !b.featured) return -1;
+    if(!a.featured && b.featured) return 1;
+    return TYPE_ORDER.indexOf(a.type_key) - TYPE_ORDER.indexOf(b.type_key);
+  });
 }
 
-function refreshChips(){document.querySelectorAll('.chip').forEach(function(b){b.classList.toggle('active',b.dataset.type===AT);});}
+/* ── Build a sidebar filter item ── */
+function filterItem(key, label, count, activeKey, clickFn, dotColor){
+  var btn = document.createElement('button');
+  btn.className = 'sidebar-filter-item' + (activeKey === key ? ' active' : '');
+  btn.dataset.key = key;
 
-/* Extract r,g,b from a hex color string like '#d97706' */
-function hexToRgb(hex){
-  var r=parseInt(hex.slice(1,3),16);
-  var g=parseInt(hex.slice(3,5),16);
-  var b=parseInt(hex.slice(5,7),16);
-  return r+','+g+','+b;
+  var dotHtml = dotColor
+    ? '<span class="sidebar-dot" style="background:' + dotColor + '"></span>'
+    : '<span class="sidebar-dot" style="background:var(--border)"></span>';
+
+  btn.innerHTML =
+    dotHtml +
+    '<span class="sidebar-filter-label">' + e(label) + '</span>' +
+    '<span class="filter-count-badge">' + count + '</span>';
+
+  btn.addEventListener('click', function(){ clickFn(key); });
+  return btn;
 }
 
+/* ── Render sidebar type filters ── */
+function buildTypeFilters(){
+  var cnt = {};
+  ALL.forEach(function(p){ cnt[p.type_key] = (cnt[p.type_key]||0) + 1; });
+
+  ['type-filters','mobile-type-filters'].forEach(function(id){
+    var wrap = document.getElementById(id);
+    if(!wrap) return;
+    wrap.innerHTML = '';
+
+    // "All" option
+    wrap.appendChild(filterItem('all','All', ALL.length, AT, function(k){
+      AT = k; apply();
+    }, null));
+
+    TYPE_ORDER.forEach(function(k){
+      if(!cnt[k]) return;
+      var m = TM[k] || { l:k, c:'#888' };
+      wrap.appendChild(filterItem(k, m.l, cnt[k], AT, function(key){
+        AT = key; apply();
+      }, m.c));
+    });
+  });
+}
+
+/* ── Render sidebar industry filters ── */
+function buildIndustryFilters(){
+  var cnt = {};
+  ALL.forEach(function(p){ cnt[p.industry_key] = (cnt[p.industry_key]||0) + 1; });
+
+  ['industry-filters','mobile-industry-filters'].forEach(function(id){
+    var wrap = document.getElementById(id);
+    if(!wrap) return;
+    wrap.innerHTML = '';
+
+    wrap.appendChild(filterItem('all','All industries', ALL.length, AI, function(k){
+      AI = k; apply();
+    }, null));
+
+    IND_ORDER.forEach(function(k){
+      if(!cnt[k]) return;
+      var m = IM[k] || { l:k, c:'#888' };
+      wrap.appendChild(filterItem(k, m.l, cnt[k], AI, function(key){
+        AI = key; apply();
+      }, m.c));
+    });
+  });
+}
+
+/* ── Refresh active states on existing items ── */
+function refreshFilters(){
+  document.querySelectorAll('[data-key]').forEach(function(btn){
+    var parent = btn.parentElement ? btn.parentElement.id : '';
+    var isType = parent.indexOf('type') >= 0;
+    var isInd  = parent.indexOf('industry') >= 0;
+    if(isType) btn.classList.toggle('active', btn.dataset.key === AT);
+    if(isInd)  btn.classList.toggle('active', btn.dataset.key === AI);
+  });
+}
+
+/* ── Build a project card ── */
 function card(p){
-  var m=TM[p.type_key]||{l:p.type,c:'#888',b:'rgba(136,136,136,0.1)'};
-  var isFeatured=p.featured===true;
-  var tcBorder=isFeatured?'rgba('+hexToRgb(m.c)+',0.25)':null;
+  var m = TM[p.type_key] || { l:p.type, c:'#888', b:'rgba(136,136,136,0.1)', rgb:'136,136,136' };
+  var isFeatured = p.featured === true;
 
-  var live=p.live_url?'<a href="'+e(p.live_url)+'" class="card-live" target="_blank" rel="noopener">Live ↗</a>':'';
-  var featuredBadge=isFeatured?'<span class="featured-badge">⭐ Featured</span>':'';
+  var techs = (p.techs||[]).slice(0,5).map(function(t){
+    return '<span class="tech-chip">' + e(t) + '</span>';
+  }).join('');
 
-  var techs=(p.techs||[]).slice(0,5).map(function(t){return'<span class="tech-chip">'+e(t)+'</span>';}).join('');
-  var stats=[p.stats&&p.stats.label1,p.stats&&p.stats.label2].filter(Boolean).map(function(s){return'<span class="stat-pill">'+e(s)+'</span>';}).join('');
+  var stats = [p.stats && p.stats.label1, p.stats && p.stats.label2]
+    .filter(Boolean)
+    .map(function(s){ return '<span class="stat-pill">' + e(s) + '</span>'; })
+    .join('');
 
-  var el=document.createElement('article');
-  el.className='project-card'+(isFeatured?' featured':'');
-  el.setAttribute('role','listitem');
-  el.dataset.type=p.type_key;
-  el.style.setProperty('--tc',m.c);
-  if(tcBorder)el.style.setProperty('--tc-border',tcBorder);
+  var liveBtn = p.live_url
+    ? '<a href="' + e(p.live_url) + '" class="card-live" target="_blank" rel="noopener">Live ↗</a>'
+    : '';
 
-  el.innerHTML=
-    '<div class="card-body">'+
-      '<div class="card-top">'+
-        '<div class="card-top-left">'+
-          '<span class="type-badge" style="background:'+m.b+';color:'+m.c+'">'+e(m.l)+'</span>'+
-          featuredBadge+
-        '</div>'+
-      '</div>'+
-      '<h3 class="card-title">'+e(p.title)+'</h3>'+
-      '<p class="card-sub" style="color:'+m.c+'">'+e(p.subtitle)+'</p>'+
-      '<p class="card-desc">'+e(p.description)+'</p>'+
-      '<div class="card-techs">'+techs+'</div>'+
-      '<div class="card-footer">'+
-        '<div class="card-stats">'+stats+'</div>'+
-        live+
-      '</div>'+
+  var starHtml = isFeatured ? '<span class="featured-star" title="Featured project">★</span>' : '';
+
+  var el = document.createElement('article');
+  el.className = 'card';
+  el.setAttribute('role', 'listitem');
+  el.dataset.type = p.type_key;
+  el.style.setProperty('--tc', m.c);
+  el.style.setProperty('--tc-rgb', m.rgb || '136,136,136');
+
+  el.innerHTML =
+    '<div class="card-top-bar"></div>' +
+    '<div class="card-body">' +
+      '<div class="card-head">' +
+        '<span class="type-badge" style="background:' + m.b + ';color:' + m.c + '">' + e(m.l) + '</span>' +
+        starHtml +
+      '</div>' +
+      '<h3 class="card-title">' + e(p.title) + '</h3>' +
+      '<p class="card-sub">' + e(p.industry) + ' · ' + e(p.subtitle) + '</p>' +
+      '<p class="card-desc">' + e(p.description) + '</p>' +
+      '<div class="card-techs">' + techs + '</div>' +
+      '<div class="card-footer">' +
+        '<div class="card-stats">' + stats + '</div>' +
+        liveBtn +
+      '</div>' +
     '</div>';
+
   return el;
 }
 
+/* ── Apply filters and re-render ── */
 function apply(){
-  refreshChips();
-  var g=document.getElementById('grid');g.innerHTML='';
-  var vis=ALL.filter(match);
-  vis.forEach(function(p){g.appendChild(card(p));});
-  document.getElementById('count').textContent=(AT==='all'&&!SQ)?ALL.length+' projects':vis.length+' of '+ALL.length+' projects';
-  var filt=AT!=='all'||SQ.length>0;
-  document.getElementById('reset-btn').classList.toggle('hidden',!filt);
-  document.getElementById('empty').hidden=vis.length>0;
-  g.hidden=vis.length===0;
+  refreshFilters();
+
+  var sorted = sortProjects(ALL);
+  var vis = sorted.filter(match);
+  var g = document.getElementById('grid');
+  g.innerHTML = '';
+  vis.forEach(function(p){ g.appendChild(card(p)); });
+
+  var isFiltered = AT !== 'all' || AI !== 'all' || SQ.length > 0;
+
+  // Count text
+  var countTxt = isFiltered
+    ? 'Showing ' + vis.length + ' of ' + ALL.length + ' projects'
+    : vis.length + ' projects';
+
+  var mobileCount = document.getElementById('count');
+  if(mobileCount) mobileCount.textContent = countTxt;
+
+  var desktopCount = document.getElementById('count-desktop');
+  if(desktopCount) desktopCount.textContent = isFiltered ? vis.length + ' of ' + ALL.length : vis.length;
+
+  // Clear button visibility
+  document.getElementById('clear-btn').classList.toggle('hidden', !isFiltered);
+
+  // Empty state
+  document.getElementById('empty').hidden = vis.length > 0;
+  g.hidden = vis.length === 0;
 }
 
-function resetAll(){AT='all';SQ='';document.getElementById('q').value='';document.getElementById('q-clear').classList.add('hidden');apply();}
-document.getElementById('reset-btn').addEventListener('click',resetAll);
-var st;
-document.getElementById('q').addEventListener('input',function(){
-  clearTimeout(st);SQ=this.value.toLowerCase();
-  document.getElementById('q-clear').classList.toggle('hidden',!this.value);
-  st=setTimeout(apply,160);
-});
-document.getElementById('q-clear').addEventListener('click',function(){document.getElementById('q').value='';SQ='';this.classList.add('hidden');apply();});
+/* ── Reset all filters ── */
+function resetAll(){
+  AT = 'all'; AI = 'all'; SQ = '';
+  var qEl = document.getElementById('q');
+  if(qEl) qEl.value = '';
+  document.getElementById('q-clear').classList.add('hidden');
+  apply();
+}
 
-fetch('data/projects.json').then(function(r){return r.json();}).then(function(d){
-  ALL=d.projects||[];
-  document.getElementById('total-count').textContent=ALL.length;
-  buildChips();apply();
-}).catch(function(){document.getElementById('count').textContent='Could not load projects.';});
+/* ── Event: clear button ── */
+document.getElementById('clear-btn').addEventListener('click', resetAll);
+
+/* ── Event: search input ── */
+var searchTimer;
+var qEl = document.getElementById('q');
+qEl.addEventListener('input', function(){
+  clearTimeout(searchTimer);
+  SQ = this.value.toLowerCase();
+  document.getElementById('q-clear').classList.toggle('hidden', !this.value);
+  searchTimer = setTimeout(apply, 160);
+});
+document.getElementById('q-clear').addEventListener('click', function(){
+  qEl.value = ''; SQ = '';
+  this.classList.add('hidden');
+  apply();
+});
+
+/* ── Keyboard shortcut: "/" focuses search ── */
+document.addEventListener('keydown', function(ev){
+  if(ev.key === '/' && document.activeElement !== qEl){
+    ev.preventDefault();
+    qEl.focus();
+  }
+  if(ev.key === 'Escape' && document.activeElement === qEl){
+    qEl.blur();
+  }
+});
+
+/* ── Mobile filter toggle ── */
+var mobileToggleBtn = document.getElementById('mobile-toggle');
+var mobilePanel = document.getElementById('mobile-filter-panel');
+mobileToggleBtn.addEventListener('click', function(){
+  var isOpen = mobilePanel.classList.toggle('open');
+  this.setAttribute('aria-expanded', isOpen);
+  document.getElementById('mobile-toggle-arrow').textContent = isOpen ? '▴' : '▾';
+});
+
+/* ── URL param: ?type=api to pre-select ── */
+function applyURLParams(){
+  var params = new URLSearchParams(window.location.search);
+  var t = params.get('type');
+  var ind = params.get('industry');
+  if(t && TM[t]) AT = t;
+  if(ind && IM[ind]) AI = ind;
+}
+
+/* ── Load projects ── */
+fetch('data/projects.json')
+  .then(function(r){ return r.json(); })
+  .then(function(d){
+    ALL = d.projects || [];
+    applyURLParams();
+    buildTypeFilters();
+    buildIndustryFilters();
+    apply();
+
+    // Show desktop header after load
+    var dh = document.getElementById('desktop-header');
+    if(dh) dh.style.display = 'flex';
+  })
+  .catch(function(){
+    var c = document.getElementById('count');
+    if(c) c.textContent = 'Could not load projects.';
+  });
+
+window.resetAll = resetAll;
+})();
 </script>
 </body>
 </html>

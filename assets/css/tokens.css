@@ -97,15 +97,19 @@
   --radius-xl:  16px;
   --radius-full: 9999px;
 
+  /* ── Card radius (premium feel) ── */
+  --card-radius: 14px;
+
   /* ── Shadows ── */
-  --shadow-sm:   0 1px 3px rgba(31,35,40,0.06), 0 1px 2px rgba(31,35,40,0.04);
-  --shadow-card: 0 2px 6px rgba(31,35,40,0.06), 0 6px 20px rgba(31,35,40,0.06);
-  --shadow-hover:0 4px 12px rgba(31,35,40,0.10), 0 12px 32px rgba(31,35,40,0.10);
-  --shadow-amber:0 4px 16px rgba(217,119,6,0.18);
+  --shadow-sm:        0 1px 3px rgba(31,35,40,0.06), 0 1px 2px rgba(31,35,40,0.04);
+  --shadow-card:      0 1px 3px rgba(31,35,40,0.04), 0 4px 16px rgba(31,35,40,0.06);
+  --shadow-card-hover:0 8px 24px rgba(31,35,40,0.10), 0 20px 48px rgba(31,35,40,0.08);
+  --shadow-hover:     0 4px 12px rgba(31,35,40,0.10), 0 12px 32px rgba(31,35,40,0.10);
+  --shadow-amber:     0 4px 16px rgba(217,119,6,0.18);
 
   /* ── Layout ── */
   --nav-h:       64px;
-  --content-max: 1160px;
+  --content-max: 1280px;
   --content-mid: 800px;
   --sidebar-w:   260px;
 
@@ -127,6 +131,7 @@
   --text-inverse:   #0d1117;
 
   --amber-light:    rgba(217, 119, 6, 0.15);
+  --amber-hover:    #f59e0b;
   --indigo-light:   rgba(76, 110, 245, 0.15);
   --teal-light:     rgba(13, 148, 136, 0.15);
 
@@ -137,9 +142,10 @@
   --warning-light:  rgba(154, 103, 0, 0.15);
   --error-light:    rgba(207, 34, 46, 0.15);
 
-  --shadow-sm:   0 1px 3px rgba(0,0,0,0.3);
-  --shadow-card: 0 2px 6px rgba(0,0,0,0.3), 0 6px 20px rgba(0,0,0,0.2);
-  --shadow-hover:0 4px 12px rgba(0,0,0,0.4), 0 12px 32px rgba(0,0,0,0.3);
+  --shadow-sm:        0 1px 3px rgba(0,0,0,0.3);
+  --shadow-card:      0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+  --shadow-card-hover:0 8px 24px rgba(0,0,0,0.45), 0 20px 48px rgba(0,0,0,0.35);
+  --shadow-hover:     0 4px 12px rgba(0,0,0,0.4), 0 12px 32px rgba(0,0,0,0.3);
 }
 
 /* ── Base reset ── */

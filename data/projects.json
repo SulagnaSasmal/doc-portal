@@ -297,7 +297,7 @@
       "industry": "Developer Tools", "industry_key": "devtools",
       "techs": ["Markdown", "DITA", "Vale", "GitHub"],
       "featured": false,
-      "live_url": "https://sulagnasasmal.github.io/docs-content-strategy/",
+      "live_url": null,
       "stats": { "label1": "Phase 7 / 7", "label2": "14 components" }
     }
   ],
