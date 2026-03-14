@@ -180,20 +180,8 @@
       "techs": ["Markdown", "Mermaid"],
       "featured": false,
       "live_url": null,
-      "github_url": "https://github.com/SulagnaSasmal/us-ach-docs",
+      "github_url": "https://github.com/SulagnaSasmal/payments-api-guide",
       "stats": { "label1": "8 files", "label2": "Mermaid diagrams" }
-    },
-    {
-      "id": "nicke-actimize",
-      "title": "NICE Actimize Platform Docs",
-      "subtitle": "Enterprise Structured Authoring",
-      "description": "Full MadCap Flare enterprise documentation for the NICE Actimize financial crime prevention platform. Covers Fraud IFM, AML, ActimizeWatch, Cloud, DataIQ, ERCM, and FMC modules — 20+ build targets including HTML5, PDF, and Word output.",
-      "type": "Enterprise Docs", "type_key": "enterprise",
-      "industry": "Compliance", "industry_key": "compliance",
-      "techs": ["MadCap Flare", "HTML5", "PDF", "DITA"],
-      "featured": true,
-      "live_url": null,
-      "stats": { "label1": "11+ modules", "label2": "20+ build targets" }
     },
     {
       "id": "sunbridge-atrium",
@@ -284,18 +272,18 @@
       "id": "docpulse",
       "title": "DocPulse",
       "subtitle": "Documentation Analytics Dashboard",
-      "description": "Documentation analytics platform with a FastAPI backend and Next.js dashboard. Tracks page views, search failures, content freshness, and coverage gaps across documentation sites. Generates weekly Markdown health reports automatically.",
+      "description": "Documentation analytics platform with a FastAPI backend and Next.js dashboard. Tracks page views, search failures, content freshness, and coverage gaps. Features 5 dashboard views (Overview, Coverage, Freshness, Search, Reports) deployed as a static export with demo data.",
       "type": "AI Tool", "type_key": "ai-tool",
       "industry": "AI / ML", "industry_key": "aiml",
       "techs": ["FastAPI", "Python", "Next.js", "Recharts", "SQLite"],
       "featured": true,
-      "live_url": null,
-      "stats": { "label1": "5 dashboard views", "label2": "Weekly reports" }
+      "live_url": "https://sulagnasasmal.github.io/docpulse/",
+      "stats": { "label1": "5 dashboard views", "label2": "Demo data" }
     }
   ],
   "meta": {
-    "total": 24,
-    "doc_projects": 20,
+    "total": 23,
+    "doc_projects": 19,
     "ai_tools": 4,
     "types": ["API Reference", "SDK Docs", "Admin Guide", "Onboarding", "Tutorial", "Training", "Knowledge Base", "Enterprise Docs", "Automation Tool", "Content Strategy"],
     "industries": ["FinTech", "Compliance", "Enterprise", "AI / ML", "Developer Tools"],
