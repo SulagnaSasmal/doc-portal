@@ -279,11 +279,23 @@
       "featured": true,
       "live_url": "https://sulagnasasmal.github.io/docpulse/",
       "stats": { "label1": "5 dashboard views", "label2": "Demo data" }
+    },
+    {
+      "id": "docforge-platform",
+      "title": "DocForge Platform",
+      "subtitle": "Interactive Docs-as-Code Demo",
+      "description": "Production-grade interactive simulation of an end-to-end Docs-as-Code platform. Six live modules: Dashboard (pipeline health, build history), Live Markdown Editor, DITA Content Map, Vale/MSTP Style Linter, Multi-format Build Outputs (HTML, PDF, OpenAPI, Postman, JSON, Changelog), and YAML Configuration. Built to demonstrate documentation infrastructure — the layer behind the docs.",
+      "type": "Enterprise Docs", "type_key": "enterprise",
+      "industry": "Developer Tools", "industry_key": "devtools",
+      "techs": ["HTML", "CSS", "JavaScript", "Vale", "DITA", "CI/CD"],
+      "featured": true,
+      "live_url": "https://sulagnasasmal.github.io/Documentation-Center-Platform/",
+      "stats": { "label1": "6 live modules", "label2": "Docs-as-Code" }
     }
   ],
   "meta": {
-    "total": 23,
-    "doc_projects": 19,
+    "total": 24,
+    "doc_projects": 20,
     "ai_tools": 4,
     "types": ["API Reference", "SDK Docs", "Admin Guide", "Onboarding", "Tutorial", "Training", "Knowledge Base", "Enterprise Docs", "Automation Tool", "Content Strategy"],
     "industries": ["FinTech", "Compliance", "Enterprise", "AI / ML", "Developer Tools"],
