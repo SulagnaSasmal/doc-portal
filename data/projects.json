@@ -281,8 +281,8 @@
     }
   ],
   "meta": {
-    "total": 24,
-    "doc_projects": 20,
+    "total": 23,
+    "doc_projects": 19,
     "ai_tools": 4,
     "types": ["API Reference", "SDK Docs", "Admin Guide", "Onboarding", "Tutorial", "Training", "Knowledge Base", "Enterprise Docs", "Automation Tool", "Content Strategy"],
     "industries": ["FinTech", "Compliance", "Enterprise", "AI / ML", "Developer Tools"],
