@@ -69,7 +69,7 @@
       "industry": "Developer Tools", "industry_key": "devtools",
       "techs": ["Markdown", "Node.js", "Python"],
       "featured": false,
-      "live_url": null,
+      "live_url": "https://sulagnasasmal.github.io/nexaflow-sdk-docs/",
       "github_url": "https://github.com/SulagnaSasmal/nexaflow-sdk-docs",
       "stats": { "label1": "14 sections", "label2": "API Reference" }
     },
@@ -215,7 +215,7 @@
       "industry": "Developer Tools", "industry_key": "devtools",
       "techs": ["Markdown", "DITA", "Vale", "GitHub"],
       "featured": false,
-      "live_url": null,
+      "live_url": "https://sulagnasasmal.github.io/docs-content-strategy/",
       "github_url": "https://github.com/SulagnaSasmal/docs-content-strategy",
       "stats": { "label1": "Phase 7 / 7", "label2": "14 components" }
     },
