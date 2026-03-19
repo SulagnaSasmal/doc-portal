@@ -165,9 +165,9 @@
       "type": "Knowledge Base", "type_key": "kb",
       "industry": "FinTech", "industry_key": "fintech",
       "techs": ["Markdown", "Mermaid"],
-      "featured": false,
-      "live_url": null,
-      "github_url": "https://github.com/SulagnaSasmal/payments-api-guide",
+      "featured": true,
+      "live_url": "https://sulagnasasmal.github.io/us-ach-payment-processing-docs/",
+      "github_url": "https://github.com/SulagnaSasmal/us-ach-payment-processing-docs",
       "stats": { "label1": "8 files", "label2": "Mermaid diagrams" }
     },
     {
