@@ -37,19 +37,6 @@
       "stats": { "label1": "API Reference", "label2": "Dark / Light" }
     },
     {
-      "id": "ppt2video",
-      "title": "PPT→MP4 Doc Automation",
-      "subtitle": "PowerPoint to Narrated Video",
-      "description": "FastAPI application that converts PowerPoint presentations into narrated MP4 videos using Azure Text-to-Speech and FFmpeg. Features async job queue, webhook callbacks, REST endpoints, and a polished dark-mode web interface.",
-      "type": "Automation Tool", "type_key": "automation",
-      "industry": "AI / ML", "industry_key": "aiml",
-      "techs": ["Python", "FastAPI", "Azure TTS", "FFmpeg"],
-      "featured": true,
-      "live_url": null,
-      "github_url": "https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation",
-      "stats": { "label1": "5 endpoints", "label2": "MP4 output" }
-    },
-    {
       "id": "payplus-admin",
       "title": "PayPlus Admin Guide",
       "subtitle": "Enterprise Administration",
