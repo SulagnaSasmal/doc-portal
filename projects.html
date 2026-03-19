@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects — Sulagna Sasmal · Documentation Portfolio</title>
-  <meta name="description" content="20 documentation projects: API references, SDK guides, tutorials, enterprise docs, compliance training, and more by Sulagna Sasmal." />
+  <meta name="description" content="18 documentation projects: API references, SDK guides, tutorials, enterprise docs, compliance training, and more by Sulagna Sasmal." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>📚</text></svg>" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
@@ -185,10 +185,17 @@ function sortProjects(arr){
   });
 }
 
-function buildPills(containerId, order, map, cnt, activeKey, onClickFn){
+function buildPills(containerId, order, map, pool, activeKey, onClickFn){
   var wrap = document.getElementById(containerId);
   if(!wrap) return;
   wrap.innerHTML = '';
+
+  /* Count from the filtered pool, not full DOC */
+  var cnt = {};
+  pool.forEach(function(p){
+    var k = (containerId === 'type-pills') ? p.type_key : p.industry_key;
+    cnt[k] = (cnt[k]||0) + 1;
+  });
 
   var allPill = document.createElement('button');
   allPill.className = 'filter-pill' + (activeKey === 'all' ? ' active' : '');
@@ -207,30 +214,28 @@ function buildPills(containerId, order, map, cnt, activeKey, onClickFn){
       '<span class="filter-pill-dot" style="background:' + m.c + '"></span>' +
       e(m.l) +
       '<span class="filter-pill-count">' + cnt[k] + '</span>';
-    pill.addEventListener('click', function(){ onClickFn(k); });
+    /* Toggle: clicking the active pill deselects it */
+    pill.addEventListener('click', function(){ onClickFn(activeKey === k ? 'all' : k); });
     wrap.appendChild(pill);
   });
 }
 
 function buildTypePills(){
-  var cnt = {};
-  DOC.forEach(function(p){ cnt[p.type_key] = (cnt[p.type_key]||0) + 1; });
-  buildPills('type-pills', TYPE_ORDER, TM, cnt, AT, function(k){ AT = k; apply(); });
+  /* Pool for type counts: filter by active industry (if any) */
+  var pool = (AI === 'all') ? DOC : DOC.filter(function(p){ return p.industry_key === AI; });
+  buildPills('type-pills', TYPE_ORDER, TM, pool, AT, function(k){ AT = k; apply(); });
 }
 
 function buildIndustryPills(){
-  var cnt = {};
-  DOC.forEach(function(p){ cnt[p.industry_key] = (cnt[p.industry_key]||0) + 1; });
-  buildPills('industry-pills', IND_ORDER, IM, cnt, AI, function(k){ AI = k; apply(); });
+  /* Pool for industry counts: filter by active type (if any) */
+  var pool = (AT === 'all') ? DOC : DOC.filter(function(p){ return p.type_key === AT; });
+  buildPills('industry-pills', IND_ORDER, IM, pool, AI, function(k){ AI = k; apply(); });
 }
 
 function refreshPills(){
-  document.querySelectorAll('#type-pills .filter-pill').forEach(function(btn){
-    btn.classList.toggle('active', btn.dataset.key === AT);
-  });
-  document.querySelectorAll('#industry-pills .filter-pill').forEach(function(btn){
-    btn.classList.toggle('active', btn.dataset.key === AI);
-  });
+  /* Rebuild both pill rows so counts update dynamically */
+  buildTypePills();
+  buildIndustryPills();
 }
 
 function card(p){
