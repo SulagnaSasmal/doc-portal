@@ -101,10 +101,10 @@
     <div class="section-header" style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:var(--sp-5);">
       <div>
         <span class="section-eyebrow">Portfolio</span>
-        <h2 class="section-title">All Documentation Projects</h2>
-        <p class="section-sub">API references, SDK docs, enterprise guides, compliance platforms, tutorials, and knowledge bases.</p>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-sub">Highlights from 18 documentation projects across API references, admin guides, compliance, and tutorials.</p>
       </div>
-      <a href="projects.html" class="btn btn-outline btn-sm" style="flex-shrink:0;">Filter &amp; search projects →</a>
+      <a href="projects.html" class="btn btn-outline btn-sm" style="flex-shrink:0;">View all 18 projects →</a>
     </div>
 
     <!-- Card grid — populated by inline script below -->
@@ -297,7 +297,8 @@
       if(!grid) return;
 
       var featured = (d.projects||[])
-        .filter(function(p){ return p.type_key !== 'ai-tool'; });
+        .filter(function(p){ return p.type_key !== 'ai-tool' && p.featured; })
+        .slice(0, 6);
 
       featured.forEach(function(p){ grid.appendChild(buildCard(p)); });
     })
