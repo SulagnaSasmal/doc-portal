@@ -39,7 +39,7 @@
           <span class="topbar-sep">·</span>
           <span class="topbar-dim">9 doc types</span>
           <span class="topbar-sep">·</span>
-          <span class="topbar-dim">5 industries</span>
+          <span class="topbar-dim">4 industries</span>
         </div>
       </div>
       <div class="topbar-search-wrap">
@@ -254,9 +254,10 @@ function card(p){
   /* Live > GitHub > nothing */
   var linkBtn = '';
   if(p.live_url){
-    linkBtn = '<a href="' + e(p.live_url) + '" class="card-live" target="_blank" rel="noopener">Live ↗</a>';
-  } else if(p.github_url){
-    linkBtn = '<a href="' + e(p.github_url) + '" class="card-live card-github" target="_blank" rel="noopener">GitHub ↗</a>';
+    linkBtn += '<a href="' + e(p.live_url) + '" class="card-live" target="_blank" rel="noopener">Live ↗</a>';
+  }
+  if(p.github_url){
+    linkBtn += '<a href="' + e(p.github_url) + '" class="card-link-github" target="_blank" rel="noopener" title="View source on GitHub"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>';
   }
 
   var starHtml = isFeatured ? '<span class="featured-star" title="Featured project">★</span>' : '';
@@ -268,6 +269,12 @@ function card(p){
   el.style.setProperty('--tc', m.c);
   el.style.setProperty('--tc-rgb', m.rgb || '136,136,136');
 
+  /* Title links to live_url if available, otherwise github_url */
+  var titleUrl = p.live_url || p.github_url || '';
+  var titleHtml = titleUrl
+    ? '<a href="' + e(titleUrl) + '" class="card-title-link" target="_blank" rel="noopener">' + e(p.title) + '</a>'
+    : e(p.title);
+
   el.innerHTML =
     '<div class="card-top-bar"></div>' +
     '<div class="card-body">' +
@@ -275,13 +282,13 @@ function card(p){
         '<span class="type-badge" style="background:' + m.b + ';color:' + m.c + '">' + e(m.l) + '</span>' +
         starHtml +
       '</div>' +
-      '<h3 class="card-title">' + e(p.title) + '</h3>' +
+      '<h3 class="card-title">' + titleHtml + '</h3>' +
       '<p class="card-sub">' + e(p.industry) + ' · ' + e(p.subtitle) + '</p>' +
       '<p class="card-desc">' + e(p.description) + '</p>' +
       '<div class="card-techs">' + techs + '</div>' +
       '<div class="card-footer">' +
         '<div class="card-stats">' + stats + '</div>' +
-        linkBtn +
+        '<div class="card-links">' + linkBtn + '</div>' +
       '</div>' +
     '</div>';
 
@@ -307,6 +314,16 @@ function apply(){
   document.getElementById('clear-btn').classList.toggle('hidden', !isFiltered);
   document.getElementById('empty').hidden = vis.length > 0;
   g.hidden = vis.length === 0;
+
+  /* Sync filter state to URL for shareable links */
+  var params = new URLSearchParams();
+  if(AT !== 'all') params.set('type', AT);
+  if(AI !== 'all') params.set('industry', AI);
+  var qs = params.toString();
+  var newUrl = window.location.pathname + (qs ? '?' + qs : '');
+  if(window.location.pathname + window.location.search !== newUrl){
+    history.replaceState(null, '', newUrl);
+  }
 
   /* Hide AI tools ref box when a type filter is active (keep clean) */
   var refBox = document.getElementById('ai-tools-ref');

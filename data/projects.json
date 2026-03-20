@@ -10,6 +10,7 @@
       "techs": ["HTML", "CSS", "JavaScript"],
       "featured": true,
       "live_url": "https://sulagnasasmal.github.io/payments-api-guide/",
+      "github_url": "https://github.com/SulagnaSasmal/payments-api-guide",
       "stats": { "label1": "40+ endpoints", "label2": "8 categories" }
     },
     {
@@ -22,6 +23,7 @@
       "techs": ["HTML", "CSS", "JavaScript", "OpenAPI"],
       "featured": true,
       "live_url": "https://sulagnasasmal.github.io/caseforge-api-docs/",
+      "github_url": "https://github.com/SulagnaSasmal/caseforge-api-docs",
       "stats": { "label1": "25+ endpoints", "label2": "7 API categories" }
     },
     {
@@ -34,6 +36,7 @@
       "techs": ["HTML", "CSS", "JavaScript"],
       "featured": false,
       "live_url": "https://sulagnasasmal.github.io/vaultpay-api-docs/",
+      "github_url": "https://github.com/SulagnaSasmal/vaultpay-api-docs",
       "stats": { "label1": "API Reference", "label2": "Dark / Light" }
     },
     {
@@ -46,6 +49,7 @@
       "techs": ["HTML", "CSS", "JavaScript"],
       "featured": true,
       "live_url": "https://sulagnasasmal.github.io/payplus-admin-guide/",
+      "github_url": "https://github.com/SulagnaSasmal/payplus-admin-guide",
       "stats": { "label1": "15+ pages", "label2": "8 sections" }
     },
     {
@@ -58,6 +62,7 @@
       "techs": ["HTML", "CSS", "Python", "Node.js"],
       "featured": true,
       "live_url": "https://sulagnasasmal.github.io/caseforge-sdk-docs/",
+      "github_url": "https://github.com/SulagnaSasmal/caseforge-sdk-docs",
       "stats": { "label1": "7 doc pages", "label2": "Phase 6 / 7" }
     },
     {
@@ -83,6 +88,7 @@
       "techs": ["HTML", "CSS", "JavaScript"],
       "featured": false,
       "live_url": "https://sulagnasasmal.github.io/caseforge-onboarding/",
+      "github_url": "https://github.com/SulagnaSasmal/caseforge-onboarding",
       "stats": { "label1": "12-week plan", "label2": "Phase 3" }
     },
     {
@@ -95,6 +101,7 @@
       "techs": ["HTML", "CSS", "JavaScript"],
       "featured": true,
       "live_url": "https://sulagnasasmal.github.io/developer-onboarding/",
+      "github_url": "https://github.com/SulagnaSasmal/developer-onboarding",
       "stats": { "label1": "5 steps", "label2": "20+ checklist items" }
     },
     {
@@ -107,6 +114,7 @@
       "techs": ["HTML", "CSS", "JavaScript", "localStorage"],
       "featured": true,
       "live_url": "https://sulagnasasmal.github.io/fintech-learning-academy/",
+      "github_url": "https://github.com/SulagnaSasmal/fintech-learning-academy",
       "stats": { "label1": "4 courses", "label2": "12+ lessons" }
     },
     {
@@ -119,6 +127,7 @@
       "techs": ["HTML", "CSS", "Node.js", "Python", "cURL"],
       "featured": true,
       "live_url": "https://sulagnasasmal.github.io/payments-tutorial-series/",
+      "github_url": "https://github.com/SulagnaSasmal/payments-tutorial-series",
       "stats": { "label1": "4 tutorials", "label2": "3 languages" }
     },
     {
@@ -131,6 +140,7 @@
       "techs": ["HTML", "CSS", "JavaScript", "Vale", "GitHub Actions"],
       "featured": false,
       "live_url": "https://sulagnasasmal.github.io/docs-as-code-portal/",
+      "github_url": "https://github.com/SulagnaSasmal/docs-as-code-portal",
       "stats": { "label1": "9 sections", "label2": "Docs-as-Code" }
     },
     {
@@ -143,6 +153,7 @@
       "techs": ["HTML", "CSS", "JavaScript", "localStorage"],
       "featured": true,
       "live_url": "https://sulagnasasmal.github.io/aml-compliance-training/",
+      "github_url": "https://github.com/SulagnaSasmal/aml-compliance-training",
       "stats": { "label1": "4 modules", "label2": "20-question quiz" }
     },
     {
@@ -155,6 +166,7 @@
       "techs": ["HTML", "CSS", "JavaScript"],
       "featured": true,
       "live_url": "https://sulagnasasmal.github.io/us-payments-hub/",
+      "github_url": "https://github.com/SulagnaSasmal/us-payments-hub",
       "stats": { "label1": "6 payment rails", "label2": "12 scenarios" }
     },
     {
@@ -180,6 +192,7 @@
       "techs": ["HTML", "CSS", "Mermaid", "JavaScript"],
       "featured": true,
       "live_url": "https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/",
+      "github_url": "https://github.com/SulagnaSasmal/enterprise-investment-management-platform-docs",
       "stats": { "label1": "9 pages", "label2": "Mermaid diagrams" }
     },
     {
@@ -192,6 +205,7 @@
       "techs": ["HTML", "CSS", "JavaScript"],
       "featured": false,
       "live_url": "https://sulagnasasmal.github.io/compliance-regulatory-hub/",
+      "github_url": "https://github.com/SulagnaSasmal/compliance-regulatory-hub",
       "stats": { "label1": "8 sections", "label2": "UCITS · AIFMD · MiFID II" }
     },
     {
@@ -204,6 +218,7 @@
       "techs": ["HTML", "CSS", "JavaScript"],
       "featured": false,
       "live_url": "https://sulagnasasmal.github.io/fraudshield-docs/",
+      "github_url": "https://github.com/SulagnaSasmal/fraudshield-docs",
       "stats": { "label1": "12 pages", "label2": "ML + Compliance" }
     },
     {
